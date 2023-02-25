@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: "[Feat] #이슈번호 제목"
-labels: ''
+labels: enhancement
 assignees: ''
 
 ---

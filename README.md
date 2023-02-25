@@ -10,10 +10,10 @@
 
 ### 📌 Issue
 
-[Issue](https://github.com/TEAM-DREAMCATCHER/DREAMCATCHER_Front-End/issues)
+-   [Issue](https://github.com/TEAM-DREAMCATCHER/DREAMCATCHER_Front-End/issues)
 
 ### 📖 Wiki
 
-[Wiki](https://github.com/TEAM-DREAMCATCHER/DREAMCATCHER_Front-End/wiki)
+-   [Wiki](https://github.com/TEAM-DREAMCATCHER/DREAMCATCHER_Front-End/wiki)
 
 ## 📲 기능목록

@@ -1,3 +1,5 @@
+import request from '@/apis'
+
 const DUMMY_EMOJI: EmojiType[] = [
     {
         id: 1,
@@ -37,6 +39,8 @@ const DUMMY_EMOJI: EmojiType[] = [
     },
 ]
 
+const MY_POSTS_URL = import.meta.env.VITE_PUBLIC_MY_POSTS_URL
+
 export interface EmojiType {
     id: number
     emoji: string
@@ -45,4 +49,11 @@ export interface EmojiType {
 export const getPostEmojisAPI = async (year: number, month: number): Promise<EmojiType[]> => {
     // TODO : DUMMY_EMOJI 대신 API 호출
     return DUMMY_EMOJI
+}
+
+export const getTest = async () => {
+    // const response = await request.get(
+    //     'https://hgsz3wlmc8.execute-api.ap-northeast-2.amazonaws.com/default/myDreams'
+    // )
+    // console.log('response: ', response)
 }

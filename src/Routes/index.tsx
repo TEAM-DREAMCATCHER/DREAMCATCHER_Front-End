@@ -7,6 +7,7 @@ import SignUp from '../pages/signup'
 import Onboarding from '../pages/onboarding'
 import Welcome from '@/pages/welcome'
 import Community from '../pages/community/community'
+import Test from '../pages/Test/test'
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
     {
         path: '/community',
         element: <Community />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/test',
+        element: <Test />,
         errorElement: <ErrorPage />,
     },
 ])

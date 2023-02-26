@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import PlusIcon from '../icons/PlusIcon'
 
-type ButtonSize = 'sm' | 'md'
+type ButtonSize = 'sm' | 'md' | 'lg'
 type ButtonColor = 'primary' | 'secondary' | 'none'
 
 interface AddButtonProps {
@@ -65,10 +65,14 @@ const COLOR = {
 
 const SIZE = {
     sm: css`
+        width: 20px;
+        height: 20px;
+    `,
+    md: css`
         width: 50px;
         height: 50px;
     `,
-    md: css`
+    lg: css`
         width: 56px;
         height: 56px;
     `,

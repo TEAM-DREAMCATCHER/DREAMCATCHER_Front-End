@@ -11,6 +11,8 @@ const Test = () => {
             <AddButton color="secondary" />
             <AddButton shape="dot" />
             <AddButton shape="dot" size="sm" />
+            <AddButton shape="dot" size="md" />
+            <AddButton shape="dot" size="lg" />
         </div>
     )
 }

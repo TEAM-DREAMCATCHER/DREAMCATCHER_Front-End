@@ -1,16 +1,22 @@
-import { CategoryLayout, CategoryBox, CategoryButton } from './style'
-import { useState } from 'react';
+import { SortOptionLayout, SortOptionList, SortOptionSpan, SortOptionItem } from './style'
 
     
-export default function index() {
+export default function SortOption() {
     return (
         <>
-            <CategoryLayout>
-                <CategoryBox>
-                    <CategoryButton>최근</CategoryButton>
-                    <CategoryButton>인기</CategoryButton>
-                </CategoryBox>
-            </CategoryLayout>
+            <SortOptionLayout>
+                <SortOptionList>
+                    <SortOptionItem className="active">
+                        <span></span>
+                        최근
+                    </SortOptionItem>
+                    <SortOptionSpan></SortOptionSpan>
+                    <SortOptionItem>
+                        <span></span>
+                        인기
+                    </SortOptionItem>
+                </SortOptionList>
+            </SortOptionLayout>
         </>
     )
 }

@@ -1,7 +1,13 @@
+import SortOption from "../../components/community/sortOption";
+import Category from "../../components/community/category";
+import Posting from "../../components/community/posting";
+
 export default function Community() {
     return (
         <>
-            <div>커뮤니티입니다.</div>
+            <Category />
+            <SortOption />
+            <Posting />
         </>
     )
 }

@@ -6,5 +6,5 @@ export const StyledRecord = styled.div`
     padding: 20px;
     background-color: black;
     color: white;
-    height: 120vh;
+    height: 100vh;
 `

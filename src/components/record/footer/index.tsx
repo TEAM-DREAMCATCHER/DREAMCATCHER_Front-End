@@ -1,15 +1,25 @@
 import { useState } from 'react'
-// import Calendar from 'react-calendar'
-import { Footer, Date, Checkbox } from './style'
+import { ko } from 'date-fns/esm/locale'
+import { Footer, Date, SDatePicker, Checkbox } from './style'
 
 export default function RecordFooter() {
     const [isPublic, setIsPublic] = useState<boolean>(false)
-    // const [date, setDate] = useState(new Date())
+    const [date, setDate] = useState<Date>(new window.Date())
 
     return (
         <Footer>
-            <Date>2023.02.26</Date>
-            {/* <Calendar onChange={setDate} value={date} /> */}
+            <Date>
+                <label htmlFor="datepicker" />
+                <SDatePicker
+                    name="datepicker"
+                    id="datepicker"
+                    selected={date}
+                    onChange={(date: Date) => setDate(date)}
+                    locale={ko}
+                    dateFormat="yyyy.MM.dd"
+                    showPopperArrow={false}
+                />
+            </Date>
             <Checkbox>
                 <label htmlFor="checkbox">커뮤니티에 공개</label>
                 <input

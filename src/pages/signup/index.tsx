@@ -30,7 +30,6 @@ function SignUp() {
     const isSubmitDisabled = !(isValidId && isValidPassword && isValidPasswordConfirm)
 
     const handleSubmit = async () => {
-        // TODO : 회원가입 로직
         try {
             await signUpAPI(id, password)
             navigate('/welcome')

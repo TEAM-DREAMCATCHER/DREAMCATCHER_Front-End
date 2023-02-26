@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ko } from 'date-fns/esm/locale'
 import { Footer, Date, SDatePicker, Checkbox } from './style'
+import CalendarIcon from '../../common/icons/CalendarIcon'
 
 export default function RecordFooter() {
     const [isPublic, setIsPublic] = useState<boolean>(false)
@@ -9,7 +10,9 @@ export default function RecordFooter() {
     return (
         <Footer>
             <Date>
-                <label htmlFor="datepicker" />
+                <label htmlFor="datepicker">
+                    <CalendarIcon />
+                </label>
                 <SDatePicker
                     name="datepicker"
                     id="datepicker"

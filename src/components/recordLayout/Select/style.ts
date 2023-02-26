@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 20em;
+    margin: 0 auto;
     min-height: 1.5em;
     border: 0.05em solid #777;
     display: flex;
@@ -13,6 +14,7 @@ export const Container = styled.div`
     :focus {
         border-color: hsl(200, 100%, 50%);
     }
+    position: relative;
 `
 export const Value = styled.span`
     flex-grow: 1;

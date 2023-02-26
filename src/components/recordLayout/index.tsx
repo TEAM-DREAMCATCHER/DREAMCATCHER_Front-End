@@ -2,14 +2,12 @@ import React, { ChangeEvent, useState } from 'react'
 import { RecordState } from './types'
 import EmojiPicker, { Emoji } from 'emoji-picker-react'
 import {
-    EmojiHeader,
+    H2,
     EmojiDescription,
     DefaultImage,
     EmojiButton,
     StyledLayout,
     EmojiContainer,
-    DescriptionHeader,
-    DescriptionContainer,
     DescriptionTextArea,
 } from './style'
 import { EmojiClickData } from 'emoji-picker-react/dist/types/exposedTypes'
@@ -43,28 +41,33 @@ function RecordLayout() {
 
     return (
         <StyledLayout>
-            <EmojiHeader>OO 님,</EmojiHeader>
-            <EmojiHeader>안온한 밤 되셨나요?</EmojiHeader>
-            <EmojiContainer>
-                <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
-                    {recordState.emoji ? (
-                        <Emoji unified={recordState.emoji} size={50} />
-                    ) : (
-                        <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
-                    )}
-                </EmojiButton>
-                <EmojiDescription>떠오르는 잔상을 이모지로 표현해보세요</EmojiDescription>
-                {showPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
-            </EmojiContainer>
-            <DescriptionHeader>어떤 감정을 느끼셨나요?</DescriptionHeader>
-            <DescriptionContainer>
+            <section>
+                <H2>
+                    OO 님,
+                    <br />
+                    안온한 밤 되셨나요?
+                </H2>
+                <EmojiContainer>
+                    <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
+                        {recordState.emoji ? (
+                            <Emoji unified={recordState.emoji} size={50} />
+                        ) : (
+                            <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
+                        )}
+                    </EmojiButton>
+                    <EmojiDescription>떠오르는 잔상을 이모지로 표현해보세요</EmojiDescription>
+                    {showPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
+                </EmojiContainer>
+            </section>
+            <section>
+                <H2>어떤 감정을 느끼셨나요?</H2>
                 <Select options={options} value={category} onChange={(o) => setCategory(o)} />
                 <DescriptionTextArea
                     placeholder="자세한 이야기를 듣고 싶어요! (최대 600자)"
                     onChange={handleChange}
                     maxLength={600}
                 ></DescriptionTextArea>
-            </DescriptionContainer>
+            </section>
         </StyledLayout>
     )
 }

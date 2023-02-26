@@ -1,5 +1,5 @@
-import { IconBox, Input, InputItemBox } from './styles'
-import CheckIcon from '../../../icons/check-icon'
+import { InputItemBox, Input, IconBox } from '@/components/signup/InputItem/styles'
+import CheckIcon from '@/icons/check-icon'
 
 interface InputItemProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void

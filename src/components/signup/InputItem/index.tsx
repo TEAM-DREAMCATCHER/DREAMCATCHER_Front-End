@@ -1,5 +1,5 @@
 import { InputItemBox, Input, IconBox, InputErrorMsg } from '@/components/signup/InputItem/styles'
-import CheckIcon from '@/icons/check-icon'
+import CheckIcon from '@/components/common/icons/CheckIcon'
 
 interface InputItemProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void

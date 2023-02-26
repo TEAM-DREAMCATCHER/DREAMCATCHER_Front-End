@@ -2,12 +2,12 @@ import { SortOptionLayout, SortOptionList, SortOptionSpan, SortOptionItem } from
 import { useState } from 'react'
 
 export default function SortOption() {
-
     return (
         <>
             <SortOptionLayout>
                 <SortOptionList>
                     <SortOptionItem>
+                    <SortOptionItem className="active">
                         <span></span>
                         최근
                     </SortOptionItem>

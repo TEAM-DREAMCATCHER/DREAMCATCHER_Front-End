@@ -16,6 +16,8 @@ export const ProfileImg = styled.div`
     border-radius: 50%;
     overflow: hidden;
     background: gray;
+    text-align: center;
+    padding: 7px 0;
 `
 export const IdParagraph = styled.p`
     margin-left: 10px;
@@ -44,6 +46,7 @@ export const ContentParagraph = styled.p`
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
+    min-height: 50px;
     color: #eeeff3;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -59,7 +62,8 @@ export const FooterBox = styled.div`
     align-items: center;
     justify-content: space-between;
 `
-export const LikeIcon = styled.div`
+export const LikeIconBox = styled.div`
+    display: flex;
     width: 24px;
     height: 24px;
     padding: 7px;
@@ -77,4 +81,3 @@ export const TimeParagraph = styled.p`
     font-size: 11px;
     font-weight: 600;
     color: #9e9e9e;
-`

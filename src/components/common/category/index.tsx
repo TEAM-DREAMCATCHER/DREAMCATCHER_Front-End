@@ -1,7 +1,6 @@
 import { CategoryLayout, CategoryList, CategoryItem } from './style'
 import { useState } from 'react';
 
-
 export default function Category() {
     const all = true;
 

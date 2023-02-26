@@ -1,39 +1,48 @@
+import LikeIcon from '@/components/common/icons/LikeIcon'
+import ProfileIcon from '@/components/common/icons/ProfileIcon'
 import {
     ContentParagraph,
     FooterBox,
     HeaderBox,
-    ProfileImg,
     ProfileEmoji,
     IdParagraph,
     PostingItem,
     ProfileBox,
-    LikeIcon,
     LikeCount,
     TimeParagraph,
 } from './style'
 
 export default function Posting() {
+    const mock = {
+        id: 4,
+        userId: 'user',
+        content: 'dream dream',
+        createdAt: '2023-02-26',
+        updatedAt: '2023-02-26',
+        likeCount: 0,
+        category: 'joy',
+        pri: false,
+        emoji: 'joy',
+    }
+
+    const loginUser = 'user'
+
     return (
         <>
             <PostingItem>
                 <HeaderBox>
                     <ProfileBox>
-                        <ProfileImg>
-                            <img src="" alt="프로필 이미지" />
-                        </ProfileImg>
-                        <IdParagraph>닉네임</IdParagraph>
+                        <ProfileIcon />
+                        <IdParagraph>{mock.userId}</IdParagraph>
                     </ProfileBox>
-                    <ProfileEmoji>📖</ProfileEmoji>
+                    <ProfileEmoji>{mock.userId === loginUser ? '📖' : ''}</ProfileEmoji>
                 </HeaderBox>
-                <ContentParagraph>
-                    꿈내용 블라블라~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                </ContentParagraph>
+                <ContentParagraph>{mock.content}</ContentParagraph>
                 <FooterBox>
-                    <LikeIcon>
-                        <img src="" alt="좋아요 아이콘"/>
-                    </LikeIcon>
-                    <LikeCount>1.2k</LikeCount>
-                    <TimeParagraph>6시간 전</TimeParagraph>
+                    <LikeIcon />
+                    <LikeCount>{mock.likeCount}</LikeCount>
+
+                    <TimeParagraph>{mock.createdAt}</TimeParagraph>
                 </FooterBox>
             </PostingItem>
         </>

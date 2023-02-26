@@ -1,4 +1,4 @@
-import SortOption from '../../components/community/sortOption/index'
+import SortOption from '@/components/community/sortOption'
 
 export default function Community() {
     return (

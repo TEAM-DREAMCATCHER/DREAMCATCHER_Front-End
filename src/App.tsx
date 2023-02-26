@@ -9,6 +9,7 @@ function App() {
         <>
             <GlobalStyles />
             <RouterProvider router={router} />
+            {/* <Community /> */}
         </>
     )
 }

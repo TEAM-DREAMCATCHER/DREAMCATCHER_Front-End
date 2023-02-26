@@ -10,42 +10,44 @@ export const OnboardingLayout = styled(Layout)`
 `
 
 export const CarouselBox = styled.div`
-    width: 265px;
-
-    overflow-x: hidden;
-    margin: auto;
     position: relative;
+    width: 265px;
+    margin: auto;
     padding-bottom: 30px;
+    overflow-x: hidden;
 `
+
 export const CarouselImgBox = styled.div`
+    ${({ theme }) => theme.layouts.flexCenter}
+
     width: 265px;
     height: 230px;
 
     margin-bottom: 40px;
-    ${({ theme }) => theme.layouts.flexCenter}
 `
 
 export const CarouselNav = styled.div`
     position: absolute;
     bottom: 0;
-    display: flex;
-    gap: 12px;
-    left: 0;
     right: 0;
+    left: 0;
+
+    display: flex;
     justify-content: center;
+    gap: 12px;
 `
 
 export const CarouselNavItem = styled.li<{ isCurrent?: boolean }>`
+    background-color: ${({ theme }) => theme.colors.white};
+    opacity: ${(props) => (props?.isCurrent ? '1' : '0.3')};
+
     display: block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.white};
-    opacity: ${(props) => (props?.isCurrent ? '1' : '0.3')};
 `
 
 export const CarouselList = styled.ul<{ idx: number }>`
-    color: #fff;
     display: flex;
     flex-wrap: nowrap;
 
@@ -59,10 +61,9 @@ export const CarouselList = styled.ul<{ idx: number }>`
 `
 
 export const CarouselItem = styled.li`
-    text-align: center;
     width: 265px;
     min-width: 265px;
-    /* height: 125px; */
+    text-align: center;
 `
 
 export const TitleBox = styled.div`
@@ -71,43 +72,38 @@ export const TitleBox = styled.div`
 
 export const Title = styled.h2`
     ${({ theme }) => theme.fonts.title26}
+
     line-height: 31px;
     text-align: center;
-
-    color: #ffffff;
 `
 
 export const Desc = styled.p`
-    font-weight: 500;
-    font-size: 16px;
+    ${({ theme }) => theme.fonts.text14};
+    color: ${({ theme }) => theme.colors.gray1};
+
     line-height: 19px;
     text-align: center;
-
-    color: #b0b0b0;
 `
 
 export const Button = styled(AuthButtonStyled)`
-    font-size: 16px;
+    ${({ theme }) => theme.fonts.title16};
+    ${({ theme }) => theme.layouts.flexCenter};
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 20px;
-
     margin-top: 74px;
 `
 
 export const SigninButton = styled(Link)`
+    ${({ theme }) => theme.fonts.text14};
+    color: ${({ theme }) => theme.colors.gray2};
+
     display: block;
     width: fit-content;
 
-    font-weight: 400;
-    font-size: 14px;
     line-height: 17px;
 
     text-align: center;
     text-decoration-line: underline;
-    color: #7d7d7d;
 
     margin: 25px auto 0;
 `

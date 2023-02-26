@@ -1,5 +1,5 @@
-import LikeIcon from '@/icons/Like-Icon'
-import ProfileIcon from '@/icons/profile-Icon'
+import LikeIcon from '@/components/common/icons/LikeIcon'
+import ProfileIcon from '@/components/common/icons/ProfileIcon'
 import {
     ContentParagraph,
     FooterBox,

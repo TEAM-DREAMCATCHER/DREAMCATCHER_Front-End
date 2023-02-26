@@ -14,6 +14,7 @@ export interface Info {
     emoji: string
 }
 
+
 export default function Community() {
     const mock = [
         {

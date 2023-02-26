@@ -1,5 +1,5 @@
-import { Button, Desc, Heading, WelcomeLayout } from '@/pages/welcome/styles'
 import { Link } from 'react-router-dom'
+import { Button, Desc, Heading, WelcomeLayout } from '@/pages/welcome/styles'
 
 function Welcome() {
     return (

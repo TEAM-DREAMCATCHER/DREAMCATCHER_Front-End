@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import calendarIcn from '../../../assets/icn_calendar.png'
 import checkActiveBtn from '../../../assets/btn_check_active.png'
 
 export const Footer = styled.footer`
@@ -8,6 +9,25 @@ export const Footer = styled.footer`
     justify-content: space-between;
     align-items: center;
 `
+
+export const Date = styled.p`
+    display: flex;
+    align-items: center;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 22px;
+        margin-right: 2px;
+        background: center / 100% no-repeat url(${calendarIcn});
+    }
+`
+
 export const Checkbox = styled.div`
     display: flex;
     align-items: center;

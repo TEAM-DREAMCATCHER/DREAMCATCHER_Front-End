@@ -3,21 +3,9 @@ import { SignupLayout, Flex, Header, Button } from '@/pages/signup/styles'
 import { Heading } from '@/pages/welcome/styles'
 import useInput from '@/pages/signup/useInput'
 import InputItem from '@/components/signup/InputItem'
-import { idDuplicateCheckAPI, signUpAPI } from '@/apis/auth'
+import { signUpAPI } from '@/apis/auth'
 import BackIcon from '@/components/common/icons/BackIcon'
-
-const validId = async (id: string): Promise<boolean> => {
-    const isValidId = await idDuplicateCheckAPI(id)
-    return isValidId
-}
-
-const validPassword = (password: string): boolean => {
-    // 최소 8자, 문자 >= 1, 숫자 >= 1:
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\w\W]{8,}$/
-
-    if (!passwordRegex.test(password)) return false
-    return true
-}
+import { validId, validPassword } from '@/utils/valid'
 
 function SignUp() {
     const navigate = useNavigate()
@@ -31,8 +19,10 @@ function SignUp() {
 
     const handleSubmit = async () => {
         try {
-            await signUpAPI(id, password)
-            navigate('/welcome')
+            const res = await signUpAPI(id, password)
+            if (res) {
+                navigate('/welcome')
+            }
         } catch (error) {
             console.log('error: ', error)
         }

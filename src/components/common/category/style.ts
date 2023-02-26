@@ -7,12 +7,23 @@ interface Category {
 }
 
 export const CategoryLayout = styled.div`
-    background: #000;
 `
 export const CategoryList = styled.ul`
     display: flex;
     align-items: center;
     padding: 10px 22px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        height: 4px;
+        background-color: #000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 3px;
+        background: #fff;
+    }
 `
 export const CategoryItem = styled.li<Category>`
     flex-shrink: 0;

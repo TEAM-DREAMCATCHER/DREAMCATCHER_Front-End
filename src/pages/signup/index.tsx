@@ -3,7 +3,7 @@ import { SignupLayout, Flex, Header } from '@/pages/signup/styles'
 import { Heading, Button } from '@/pages/welcome/styles'
 import useInput from '@/pages/signup/useInput'
 import InputItem from '@/components/signup/InputItem'
-import BackIcon from '@/icons/back-icon'
+import BackIcon from '@/components/common/icons/BackIcon'
 
 const validId = async (id: string): Promise<boolean> => {
     // TODO : api 연결

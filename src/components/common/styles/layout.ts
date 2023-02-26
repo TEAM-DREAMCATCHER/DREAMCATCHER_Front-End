@@ -5,6 +5,7 @@ export const Layout = styled.div`
     max-width: 430px;
     margin: auto;
     min-height: 100vh;
-    background: #12121b;
-    color: #ffffff;
+
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.white};
 `

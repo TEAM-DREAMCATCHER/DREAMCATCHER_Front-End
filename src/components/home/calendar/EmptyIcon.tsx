@@ -1,21 +1,15 @@
-// NOTE: 공통 컴포넌트 제작 후,추후 삭제 예정
+// NOTE: 공통 컴포넌트 제작 후,교체 예정
 const EmptyIcon = () => {
     return (
-        <svg
-            width="19"
-            height="18"
-            viewBox="0 0 19 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="19" height="18" viewBox="0 0 19 18" fill="none">
             <circle
                 cx="9.5"
                 cy="9"
                 r="8.5"
                 stroke="url(#paint0_linear_49_10859)"
-                stroke-miterlimit="4.62023"
-                stroke-linejoin="bevel"
-                stroke-dasharray="2.5 2.5"
+                strokeMiterlimit="4.62023"
+                strokeLinejoin="bevel"
+                strokeDasharray="2.5 2.5"
             />
             <path
                 d="M9.97507 8.92507V6.6334C9.97507 6.56046 9.94609 6.49052 9.89452 6.43894C9.84295 6.38737 9.773 6.3584 9.70007 6.3584C9.62713 6.3584 9.55718 6.38737 9.50561 6.43894C9.45404 6.49052 9.42507 6.56046 9.42507 6.6334V8.92507H7.1334C7.06046 8.92507 6.99052 8.95404 6.93894 9.00561C6.88737 9.05718 6.8584 9.12713 6.8584 9.20007C6.8584 9.273 6.88737 9.34295 6.93894 9.39452C6.99052 9.44609 7.06046 9.47507 7.1334 9.47507H9.42507V11.7667C9.42601 11.8394 9.45529 11.9088 9.50666 11.9601C9.55803 12.0115 9.62743 12.0408 9.70007 12.0417C9.773 12.0417 9.84295 12.0128 9.89452 11.9612C9.94609 11.9096 9.97507 11.8397 9.97507 11.7667V9.47507H12.2667C12.3397 9.47507 12.4096 9.44609 12.4612 9.39452C12.5128 9.34295 12.5417 9.273 12.5417 9.20007C12.5408 9.12743 12.5115 9.05803 12.4601 9.00666C12.4088 8.95529 12.3394 8.92601 12.2667 8.92507H9.97507Z"
@@ -30,8 +24,8 @@ const EmptyIcon = () => {
                     y2="13.8"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#635273" />
-                    <stop offset="1" stop-color="#B9A1CF" />
+                    <stop stopColor="#635273" />
+                    <stop offset="1" stopColor="#B9A1CF" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_49_10859"
@@ -41,8 +35,8 @@ const EmptyIcon = () => {
                     y2="10.7156"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#635273" />
-                    <stop offset="1" stop-color="#B9A1CF" />
+                    <stop stopColor="#635273" />
+                    <stop offset="1" stopColor="#B9A1CF" />
                 </linearGradient>
             </defs>
         </svg>

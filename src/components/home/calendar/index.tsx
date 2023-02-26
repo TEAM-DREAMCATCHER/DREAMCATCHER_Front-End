@@ -1,13 +1,13 @@
+import { useEffect, useState } from 'react'
 import { EmojiType, getPostEmojisAPI } from '@/apis/home'
+import { CalendarLayout, EmptyBox, Heading, SubHeading } from '@/components/home/calendar/styles'
 import EmptyIcon from '@/components/home/calendar/EmptyIcon'
 import CalendarItem from '@/components/home/calendar/item'
-import { CalendarLayout, EmptyBox, Heading, SubHeading } from '@/components/home/calendar/styles'
-import { useEffect, useState } from 'react'
 
 function Calendar() {
     const [emojiList, setEmojiList] = useState<EmojiType[]>([])
 
-    const getPostEmojis = async () => {
+    const getPostEmojis = async (): Promise<void> => {
         const date = new Date()
 
         const response = await getPostEmojisAPI(date.getFullYear(), date.getMonth())

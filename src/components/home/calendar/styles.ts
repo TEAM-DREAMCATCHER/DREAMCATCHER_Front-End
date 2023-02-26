@@ -11,6 +11,7 @@ export const CalendarLayout = styled.div`
     overflow-x: auto;
     left: -10px;
     margin-top: 34px;
+
     &::-webkit-scrollbar {
         width: 2px;
     }
@@ -28,16 +29,16 @@ export const CalendarLayout = styled.div`
 export const EmptyBox = styled.div`
     text-align: center;
     margin: 54px auto 0;
-
-    ${({ theme }) => theme.fonts.text13}
-    ${({ theme }) => theme.layouts.flexCenterColumn}
     gap: 6px;
     line-height: 20px;
 
-    background: ${({ theme }) => theme.colors.linear.purple};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
+    ${({ theme }) => theme.layouts.flexCenterColumn}
+    ${({ theme }) => theme.fonts.text13}
+    background: ${({ theme }) => theme.colors.linear.purple};
 `
 
 export const ShineBox = styled.div`
@@ -47,10 +48,10 @@ export const ShineBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    ${({ theme }) => theme.effects.shine.main}
-    background-color : ${({ theme }) => theme.colors.white};
 
     border-radius: 50%;
+    ${({ theme }) => theme.effects.shine.main}
+    background-color : ${({ theme }) => theme.colors.white};
 `
 
 export const Heading = styled.h1`

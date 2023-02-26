@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import calendarIcn from '../../../assets/icn_calendar.png'
-import checkActiveBtn from '../../../assets/btn_check_active.png'
+//import calendarIcn from '../../../assets/icn_calendar.png'
+//import checkActiveBtn from '../../../assets/btn_check_active.png'
 
 export const Footer = styled.footer`
     min-height: 55px;
@@ -22,7 +22,7 @@ export const Date = styled.div`
         width: 24px;
         height: 22px;
         margin-right: 2px;
-        background: center / 100% no-repeat url(${calendarIcn});
+        /*background: center / 100% no-repeat url(${calendarIcn});*/
         cursor: pointer;
     }
 `
@@ -62,6 +62,6 @@ export const Checkbox = styled.div`
     }
 
     input:checked {
-        background: center / 15px 15px no-repeat url(${checkActiveBtn});
+        /*background: center / 15px 15px no-repeat url(${checkActiveBtn});*/
     }
 `

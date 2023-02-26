@@ -28,7 +28,7 @@ export default function Posting() {
                         <p>❤️5</p>
                     </div>
                     <div>
-                        <button>🤍</button>
+                        <p>6시간전</p>
                     </div>
                 </FooterBox>
             </PostingItem>

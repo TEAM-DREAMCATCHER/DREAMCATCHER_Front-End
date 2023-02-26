@@ -68,8 +68,7 @@ export const TitleBox = styled.div`
 `
 
 export const Title = styled.h2`
-    font-weight: 700;
-    font-size: 26px;
+    ${({ theme }) => theme.typography.text26}
     line-height: 31px;
     text-align: center;
 

@@ -8,6 +8,7 @@ import Onboarding from '../pages/onboarding'
 import Welcome from '@/pages/welcome'
 import Community from '../pages/community/community'
 import Test from '../pages/Test/test'
+import Detail from '@/pages/detail'
 
 const router = createBrowserRouter([
     {

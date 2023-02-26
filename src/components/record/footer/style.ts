@@ -17,6 +17,7 @@ export const Checkbox = styled.div`
         font-weight: 700;
         font-size: 12px;
         line-height: 14px;
+        cursor: pointer;
     }
 
     input {
@@ -27,6 +28,7 @@ export const Checkbox = styled.div`
         background-color: rgba(238, 239, 243, 0.95);
         box-shadow: 0 0 5px 0.5px rgba(238, 239, 243, 0.95);
         border-radius: 3px;
+        cursor: pointer;
     }
 
     input:checked {

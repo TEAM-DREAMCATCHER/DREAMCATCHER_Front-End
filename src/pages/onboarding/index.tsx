@@ -68,9 +68,9 @@ function Onboarding() {
                     </CarouselItem>
                 </CarouselList>
                 <CarouselNav>
-                    <CarouselNavItem isCurrent={idx === 0}></CarouselNavItem>
-                    <CarouselNavItem isCurrent={idx === 1}></CarouselNavItem>
-                    <CarouselNavItem isCurrent={idx === 2}></CarouselNavItem>
+                    <CarouselNavItem isCurrent={idx === 0} onClick={() => setIdx(0)} />
+                    <CarouselNavItem isCurrent={idx === 1} onClick={() => setIdx(1)} />
+                    <CarouselNavItem isCurrent={idx === 2} onClick={() => setIdx(2)} />
                 </CarouselNav>
             </CarouselBox>
             <Link to="/signup">

@@ -24,6 +24,7 @@ export const CarouselImgBox = styled.div`
     margin-bottom: 40px;
     ${({ theme }) => theme.layouts.flexCenter}
 `
+
 export const CarouselNav = styled.div`
     position: absolute;
     bottom: 0;

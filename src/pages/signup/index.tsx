@@ -2,16 +2,20 @@ import BackIcon from '../../icons/back-icon'
 import { Wrapper, Button, Header, Heading, Flex } from './styles'
 import InputItem from '../../components/signup/InputItem'
 import useInput from './useInput'
+import { idDuplicateAPI } from '../../apis/auth'
 
 const validId = async (id: string): Promise<boolean> => {
-    // TODO : 아이디 중복 체크
-    if (id.length < 8) return false
-    return true
+    // TODO : api 연결
+    // const isDuplicate = await idDuplicateAPI(id)
+    const isDuplicate = false
+    return !isDuplicate
 }
 
 const validPassword = (password: string): boolean => {
-    // TODO : 비밀번호 정규식 체크
-    if (password.length < 8) return false
+    // 최소 8자, 문자 >= 1, 숫자 >= 1:
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\w\W]{8,}$/
+
+    if (!passwordRegex.test(password)) return false
     return true
 }
 
@@ -22,7 +26,7 @@ function SignUp() {
 
     // NOTE: 에러 처리를 어떻게 하면 좋을까..?
     const isValidPasswordConfirm = password === passwordConfirm
-    const isSubmitDisabled = !(isValidId || isValidPassword || isValidPasswordConfirm)
+    const isSubmitDisabled = !(isValidId && isValidPassword && isValidPasswordConfirm)
 
     const handleSubmit = () => {
         // TODO : 회원가입 로직

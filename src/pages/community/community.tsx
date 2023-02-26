@@ -1,12 +1,11 @@
-import Posting from '../../components/common/posting'
-import Detail from '../detail'
+import Category from '@/components/common/category'
+import Posting from '../../components/community/posting'
 
 export default function Community() {
     return (
         <>
-            <div>커뮤니티입니다.</div>
+            <Category />
             <Posting />
-            <Detail />
         </>
     )
 }

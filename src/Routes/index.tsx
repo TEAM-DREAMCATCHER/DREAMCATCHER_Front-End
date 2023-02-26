@@ -7,7 +7,11 @@ import SignUp from '../pages/signup'
 import Onboarding from '../pages/onboarding'
 import Welcome from '@/pages/welcome'
 import Community from '../pages/community/community'
+<<<<<<< HEAD
 import Detail from '@/pages/detail'
+=======
+import Test from '../pages/Test/test'
+>>>>>>> 7ebbef1ee7b93283090431b7e0ece17f93c0b5fb
 
 const router = createBrowserRouter([
     {
@@ -34,12 +38,20 @@ const router = createBrowserRouter([
         path: '/community',
         element: <Community />,
         errorElement: <ErrorPage />,
+<<<<<<< HEAD
         children: [
             {
                 path: 'Detail/:id',
                 element: <Detail />,
             },
         ],
+=======
+    },
+    {
+        path: '/test',
+        element: <Test />,
+        errorElement: <ErrorPage />,
+>>>>>>> 7ebbef1ee7b93283090431b7e0ece17f93c0b5fb
     },
 ])
 

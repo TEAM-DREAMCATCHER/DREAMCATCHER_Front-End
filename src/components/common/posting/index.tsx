@@ -4,7 +4,6 @@ import {
     ContentParagraph,
     FooterBox,
     HeaderBox,
-    ProfileImg,
     ProfileEmoji,
     IdParagraph,
     PostingItem,

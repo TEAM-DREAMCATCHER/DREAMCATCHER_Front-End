@@ -1,6 +1,8 @@
+import BackIcon from '@/components/common/icons/BackIcon'
 import InputItem from '@/components/signup/InputItem'
-import { SigninLayout } from '@/pages/signin/styles'
+import { Button, SigninLayout, Header, Heading, Main, SignupButton } from '@/pages/signin/styles'
 import useInput from '@/pages/signup/useInput'
+import { Link } from 'react-router-dom'
 
 function Signin() {
     const [id, handleIdChange] = useInput()
@@ -8,20 +10,31 @@ function Signin() {
 
     return (
         <SigninLayout>
-            <InputItem
-                type="text"
-                name="id"
-                onChange={handleIdChange}
-                value={id}
-                placeholder="아이디 입력"
-            />
-            <InputItem
-                type="password"
-                name="password"
-                onChange={handlePasswordChange}
-                value={password}
-                placeholder="비밀번호 입력"
-            />
+            <Header>
+                <Link to="/">
+                    <BackIcon />
+                </Link>
+            </Header>
+            <Heading>로그인을 해주세요</Heading>
+
+            <Main>
+                <InputItem
+                    type="text"
+                    name="id"
+                    onChange={handleIdChange}
+                    value={id}
+                    placeholder="아이디 입력"
+                />
+                <InputItem
+                    type="password"
+                    name="password"
+                    onChange={handlePasswordChange}
+                    value={password}
+                    placeholder="비밀번호 입력"
+                />
+                <Button>로그인</Button>
+                <SignupButton to="/signup">아이디가 없으신가요? 회원가입 하기</SignupButton>
+            </Main>
         </SigninLayout>
     )
 }

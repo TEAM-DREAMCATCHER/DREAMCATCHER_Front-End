@@ -14,6 +14,7 @@ const colors = {
     gray0: '#262626',
     gray1: '#9E9E9E',
     gray2: '#DCDCDC',
+    black: '#000000',
 }
 
 export default colors

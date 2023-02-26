@@ -18,8 +18,12 @@ export const signUpAPI = async (id: string, password: string): Promise<boolean> 
         const response = await axios.post(
             SIGN_UP_BASE_URL + '?username=' + id + '&password=' + password
         )
-
-        return response.data.result
+        const token = response.data.token
+        if (token) {
+            localStorage.setItem('access-token', token)
+            return true
+        }
+        throw new Error('회원가입에 실패했습니다.')
     } catch (error) {
         throw error
     }

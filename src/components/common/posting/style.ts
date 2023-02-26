@@ -3,9 +3,8 @@ import styled from 'styled-components'
 export const PostingItem = styled.li`
     width: 390px;
     height: 154px;
-    margin: 10px 0;
+    margin: 16px auto;
     padding: 20px;
-    margin-top: 16px;
     background: #1d1a23;
     border-radius: 20px;
     list-style: none;

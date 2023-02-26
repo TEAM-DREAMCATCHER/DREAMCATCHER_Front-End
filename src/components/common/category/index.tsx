@@ -40,28 +40,26 @@ export default function Category() {
 
     return (
         <>
-            <CategoryLayout>
-                <CategoryList>
-                    {
-                        categoryList.map((item, index) => {
-                            if (index === 0 && all || index > 0) {
-                                return (
-                                    <CategoryItem
-                                        key={item.id}
-                                        idx={index}
-                                        active={btnActive}
-                                        onClick={() => {
-                                            setBtnActive(index)
-                                        }}
-                                    >
-                                        {item.tag}
-                                    </CategoryItem>
-                                )
-                            } 
-                        })
-                    }
-                </CategoryList>
-            </CategoryLayout>
+            <CategoryList>
+                {
+                    categoryList.map((item, index) => {
+                        if (index === 0 && all || index > 0) {
+                            return (
+                                <CategoryItem
+                                    key={item.id}
+                                    idx={index}
+                                    active={btnActive}
+                                    onClick={() => {
+                                        setBtnActive(index)
+                                    }}
+                                >
+                                    {item.tag}
+                                </CategoryItem>
+                            )
+                        } 
+                    })
+                }
+            </CategoryList>
         </>
     )
 }

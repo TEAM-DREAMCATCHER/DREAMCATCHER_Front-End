@@ -9,7 +9,14 @@ export const Layout = styled.div`
     color: #ffffff;
 `
 export const HomeLayout = styled(Layout)`
-    padding: 95px 20px 80px;
+    padding: 0 20px 80px;
+`
+export const Header = styled.header`
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
 `
 
 export const Heading = styled.h1`
@@ -19,7 +26,7 @@ export const Heading = styled.h1`
     display: flex;
 
     color: rgba(238, 239, 243, 0.95);
-
+    margin-top: 63px;
     margin-bottom: 18px;
 `
 

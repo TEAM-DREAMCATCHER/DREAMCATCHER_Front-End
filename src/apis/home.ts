@@ -27,6 +27,14 @@ const DUMMY_EMOJI: EmojiType[] = [
         id: 8,
         emoji: '1f423',
     },
+    {
+        id: 9,
+        emoji: '1f423',
+    },
+    {
+        id: 10,
+        emoji: '1f423',
+    },
 ]
 
 export interface EmojiType {

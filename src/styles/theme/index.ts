@@ -1,4 +1,5 @@
 import colors from '@/styles/theme/colors'
+import effects from '@/styles/theme/effects'
 import fonts from '@/styles/theme/fonts'
 import layouts from '@/styles/theme/layouts'
 
@@ -10,6 +11,7 @@ const theme = {
     fonts,
     colors,
     layouts,
+    effects,
 }
 
 export default theme

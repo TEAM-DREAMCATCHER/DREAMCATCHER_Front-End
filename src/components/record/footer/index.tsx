@@ -15,6 +15,7 @@ export default function RecordFooter() {
                     id="datepicker"
                     selected={date}
                     onChange={(date: Date) => setDate(date)}
+                    maxDate={new window.Date()}
                     locale={ko}
                     dateFormat="yyyy.MM.dd"
                     showPopperArrow={false}

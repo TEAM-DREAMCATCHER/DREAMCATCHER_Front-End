@@ -19,6 +19,11 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
+        path: '/home',
+        errorElement: <ErrorPage />,
+        element: <Home />,
+    },
+    {
         path: '/signup',
         element: <SignUp />,
         errorElement: <ErrorPage />,
@@ -41,6 +46,11 @@ const router = createBrowserRouter([
     {
         path: '/community',
         element: <Community />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/community/:id',
+        element: <Detail />,
         errorElement: <ErrorPage />,
     },
     {

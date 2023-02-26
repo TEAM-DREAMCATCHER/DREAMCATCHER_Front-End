@@ -5,6 +5,7 @@ export const PostingSection = styled.section`
     height: 932px;
     background-color: black;
     padding: 20px;
+    color: white;
 `
 
 export const HeaderBox = styled.div`

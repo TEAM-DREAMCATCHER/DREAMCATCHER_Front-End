@@ -15,6 +15,7 @@ export const CloseButton = styled.img.attrs({
     width: 32px;
     height: 32px;
     cursor: pointer;
+    margin-left: -8px;
 `
 
 export const SaveButton = styled.img.attrs({
@@ -24,4 +25,5 @@ export const SaveButton = styled.img.attrs({
     width: 28px;
     height: 28px;
     cursor: pointer;
+    margin-right: -5px;
 `

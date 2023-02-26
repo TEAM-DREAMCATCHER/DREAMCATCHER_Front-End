@@ -10,8 +10,6 @@ export const Footer = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 700px;
 `
 
 export const Date = styled.div`

@@ -1,5 +1,4 @@
 import {
-    SignupButton,
     CarouselBox,
     CarouselItem,
     CarouselList,
@@ -10,8 +9,10 @@ import {
     OnboardingLayout,
     Title,
     TitleBox,
+    Button,
 } from '@/pages/onboarding/styles'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import EmailIcon from './email-icon.png'
 
 function Onboarding() {
@@ -62,10 +63,12 @@ function Onboarding() {
                     <CarouselNavItem isCurrent={idx === 2}></CarouselNavItem>
                 </CarouselNav>
             </CarouselBox>
-            <SignupButton to="/signup">
-                <img src={EmailIcon} alt="email" width={16} height={16} />
-                <span>아이디로 회원가입</span>
-            </SignupButton>
+            <Link to="/signup">
+                <Button>
+                    <img src={EmailIcon} alt="email" width={16} height={16} />
+                    <span>아이디로 회원가입</span>
+                </Button>
+            </Link>
             <SigninButton to="/signin">이미 회원가입을 하셨나요? 로그인하기</SigninButton>
         </OnboardingLayout>
     )

@@ -8,7 +8,9 @@ import Onboarding from '../pages/onboarding'
 import Welcome from '@/pages/welcome'
 import Community from '../pages/community/community'
 import Test from '../pages/Test/test'
+import Signin from '@/pages/signin'
 import Detail from '@/pages/detail'
+
 
 const router = createBrowserRouter([
     {
@@ -19,6 +21,11 @@ const router = createBrowserRouter([
     {
         path: '/signup',
         element: <SignUp />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/signin',
+        element: <Signin />,
         errorElement: <ErrorPage />,
     },
     {

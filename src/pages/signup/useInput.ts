@@ -20,6 +20,7 @@ function useInput(init?: string, valid?: ValidType): UseInputReturns {
         setInput(value)
 
         if (valid) {
+            // TODO : debounce
             const checkValid = await valid(value)
             setIsValid(checkValid)
         }

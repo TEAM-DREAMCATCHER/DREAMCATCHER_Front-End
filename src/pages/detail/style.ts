@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const PostingSection = styled.section`
@@ -14,7 +15,7 @@ export const HeaderBox = styled.div`
     margin: 20px;
 `
 
-export const BackButton = styled.button`
+export const BackButton = styled(Link)`
     color: white;
     cursor: pointer;
     &:hover {

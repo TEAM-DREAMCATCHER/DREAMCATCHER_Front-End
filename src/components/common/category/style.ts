@@ -23,6 +23,7 @@ export const CategoryItem = styled.li<Category>`
     color: #fff;
     text-shadow: #fff 1px 0 10px;
 
+
     ${(props) =>
         props.idx == props.active
             ? 'background: linear-gradient(126.87deg, #b9a1cf 16.19%, #635273 83.65%); border-radius: 25px;'

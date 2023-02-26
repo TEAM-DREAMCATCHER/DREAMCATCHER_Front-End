@@ -3,13 +3,12 @@ import { SignupLayout, Flex, Header } from '@/pages/signup/styles'
 import { Heading, Button } from '@/pages/welcome/styles'
 import useInput from '@/pages/signup/useInput'
 import InputItem from '@/components/signup/InputItem'
-import BackIcon from '@/components/common/icons/BackIcon'
+import BackIcon from '@/icons/back-icon'
+import { idDuplicateCheckAPI } from '@/apis/auth'
 
 const validId = async (id: string): Promise<boolean> => {
-    // TODO : api 연결
-    // const isDuplicate = await idDuplicateAPI(id)
-    const isDuplicate = true
-    return !isDuplicate
+    const isValidId = await idDuplicateCheckAPI(id)
+    return isValidId
 }
 
 const validPassword = (password: string): boolean => {

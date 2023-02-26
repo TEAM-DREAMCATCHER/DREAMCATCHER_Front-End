@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { SignupLayout, Flex, Header } from '@/pages/signup/styles'
-import { Heading, Button } from '@/pages/welcome/styles'
+import { SignupLayout, Flex, Header, Button } from '@/pages/signup/styles'
+import { Heading } from '@/pages/welcome/styles'
 import useInput from '@/pages/signup/useInput'
 import InputItem from '@/components/signup/InputItem'
-import BackIcon from '@/icons/back-icon'
 import { idDuplicateCheckAPI, signUpAPI } from '@/apis/auth'
+import BackIcon from '@/components/common/icons/BackIcon'
 
 const validId = async (id: string): Promise<boolean> => {
     const isValidId = await idDuplicateCheckAPI(id)

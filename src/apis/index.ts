@@ -1,8 +1,6 @@
 import axios from 'axios'
 
-const request = axios.create({
-    baseURL: '',
-})
+const request = axios.create()
 
 request.interceptors.request.use(
     function (config) {
@@ -14,7 +12,7 @@ request.interceptors.request.use(
         }
 
         config.headers['Content-Type'] = 'application/json'
-        config.headers.Authorization = `Bearer ${access_token}`
+        config.headers.authorization = `Bearer ${access_token}`
         return config
     },
     async function (error) {

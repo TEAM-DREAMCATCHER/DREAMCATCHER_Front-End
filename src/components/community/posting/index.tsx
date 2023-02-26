@@ -1,4 +1,16 @@
-import { ContentBox, FooterBox, HeaderBox, IdBox, PostingItem, ProfileBox } from './style'
+import {
+    ContentParagraph,
+    FooterBox,
+    HeaderBox,
+    ProfileImg,
+    ProfileEmoji,
+    IdParagraph,
+    PostingItem,
+    ProfileBox,
+    LikeIcon,
+    LikeCount,
+    TimeParagraph,
+} from './style'
 
 export default function Posting() {
     return (
@@ -6,30 +18,22 @@ export default function Posting() {
             <PostingItem>
                 <HeaderBox>
                     <ProfileBox>
-                        <div>
-                            <p>사진</p>
-                        </div>
-                        <div>
-                            <IdBox>
-                                <p>닉네임</p>
-                            </IdBox>
-                            <div>
-                                <p>6시간전</p>
-                            </div>
-                        </div>
+                        <ProfileImg>
+                            <img src="" alt="프로필 이미지" />
+                        </ProfileImg>
+                        <IdParagraph>닉네임</IdParagraph>
                     </ProfileBox>
-                    <div>📖</div>
+                    <ProfileEmoji>📖</ProfileEmoji>
                 </HeaderBox>
-                <ContentBox>
-                    <p>꿈내용 블라블라~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-                </ContentBox>
+                <ContentParagraph>
+                    꿈내용 블라블라~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                </ContentParagraph>
                 <FooterBox>
-                    <div>
-                        <p>❤️5</p>
-                    </div>
-                    <div>
-                        <p>6시간전</p>
-                    </div>
+                    <LikeIcon>
+                        <img src="" alt="좋아요 아이콘"/>
+                    </LikeIcon>
+                    <LikeCount>1.2k</LikeCount>
+                    <TimeParagraph>6시간 전</TimeParagraph>
                 </FooterBox>
             </PostingItem>
         </>

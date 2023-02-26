@@ -1,5 +1,6 @@
 import LikeIcon from '@/components/common/icons/LikeIcon'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
+import { Info } from '@/pages/community/community'
 import {
     ContentParagraph,
     FooterBox,
@@ -12,19 +13,11 @@ import {
     TimeParagraph,
 } from './style'
 
-export default function Posting() {
-    const mock = {
-        id: 4,
-        userId: 'user',
-        content: 'dream dream',
-        createdAt: '2023-02-26',
-        updatedAt: '2023-02-26',
-        likeCount: 0,
-        category: 'joy',
-        pri: false,
-        emoji: 'joy',
-    }
+type InfoTypes = {
+    props: Info
+}
 
+export default function Posting({ props }: InfoTypes): React.ReactElement {
     const loginUser = 'user'
 
     return (
@@ -33,16 +26,16 @@ export default function Posting() {
                 <HeaderBox>
                     <ProfileBox>
                         <ProfileIcon />
-                        <IdParagraph>{mock.userId}</IdParagraph>
+                        <IdParagraph>{props.userId}</IdParagraph>
                     </ProfileBox>
-                    <ProfileEmoji>{mock.userId === loginUser ? '📖' : ''}</ProfileEmoji>
+                    <ProfileEmoji>{props.userId === loginUser ? '📖' : ''}</ProfileEmoji>
                 </HeaderBox>
-                <ContentParagraph>{mock.content}</ContentParagraph>
+                <ContentParagraph>{props.content}</ContentParagraph>
                 <FooterBox>
                     <LikeIcon />
-                    <LikeCount>{mock.likeCount}</LikeCount>
+                    <LikeCount>{props.likeCount}</LikeCount>
 
-                    <TimeParagraph>{mock.createdAt}</TimeParagraph>
+                    <TimeParagraph>{props.createdAt}</TimeParagraph>
                 </FooterBox>
             </PostingItem>
         </>

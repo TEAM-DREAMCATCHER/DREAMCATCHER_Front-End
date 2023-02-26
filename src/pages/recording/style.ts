@@ -4,6 +4,6 @@ export const StyledRecord = styled.div`
     background-color: black;
     color: white;
     display: flex;
-    width: 80vw;
-    height: 90vh;
+    justify-content: center;
+    height: 120vh;
 `

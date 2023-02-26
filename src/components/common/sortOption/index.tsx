@@ -6,7 +6,6 @@ export default function SortOption() {
         <>
             <SortOptionLayout>
                 <SortOptionList>
-                    <SortOptionItem>
                     <SortOptionItem className="active">
                         <span></span>
                         최근

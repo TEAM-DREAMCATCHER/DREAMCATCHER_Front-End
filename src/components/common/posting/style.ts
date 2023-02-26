@@ -81,3 +81,4 @@ export const TimeParagraph = styled.p`
     font-size: 11px;
     font-weight: 600;
     color: #9e9e9e;
+`

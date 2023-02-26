@@ -1,4 +1,5 @@
 import { SortOptionLayout, SortOptionList, SortOptionSpan, SortOptionItem } from './style'
+import { useState } from 'react'
 
 export default function SortOption() {
     return (

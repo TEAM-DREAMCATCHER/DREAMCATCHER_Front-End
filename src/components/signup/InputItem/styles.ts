@@ -3,9 +3,19 @@ import styled from 'styled-components'
 export const InputItemBox = styled.div`
     position: relative;
     width: 100%;
-    height: 58px;
+    height: fit-content;
     text-align: left;
 `
+
+export const InputErrorMsg = styled.p`
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #e03223;
+
+    margin: 8px 24px;
+`
+
 export const Input = styled.input`
     width: 100%;
     height: 100%;
@@ -14,6 +24,7 @@ export const Input = styled.input`
     border-radius: 20px;
     padding: 18px 22px;
     color: #ffffff;
+    height: 58px;
 
     font-size: 19px;
     &::placeholder {

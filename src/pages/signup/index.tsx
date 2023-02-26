@@ -1,13 +1,14 @@
-import BackIcon from '../../icons/back-icon'
-import { SignupLayout, Button, Header, Heading, Flex } from './styles'
-import InputItem from '../../components/signup/InputItem'
-import useInput from './useInput'
-import { idDuplicateAPI } from '../../apis/auth'
+import { Link, useNavigate } from 'react-router-dom'
+import { SignupLayout, Flex, Header } from '@/pages/signup/styles'
+import { Heading, Button } from '@/pages/welcome/styles'
+import useInput from '@/pages/signup/useInput'
+import InputItem from '@/components/signup/InputItem'
+import BackIcon from '@/icons/back-icon'
 
 const validId = async (id: string): Promise<boolean> => {
     // TODO : api 연결
     // const isDuplicate = await idDuplicateAPI(id)
-    const isDuplicate = false
+    const isDuplicate = true
     return !isDuplicate
 }
 
@@ -20,8 +21,13 @@ const validPassword = (password: string): boolean => {
 }
 
 function SignUp() {
-    const [id, handleIdChange, isValidId] = useInput('', validId)
-    const [password, handlePasswordChange, isValidPassword] = useInput('', validPassword)
+    const navigate = useNavigate()
+
+    const [id, handleIdChange, isValidId, isErrorId] = useInput('', validId)
+    const [password, handlePasswordChange, isValidPassword, isErrorPassword] = useInput(
+        '',
+        validPassword
+    )
     const [passwordConfirm, handlePasswordConfirmChange] = useInput()
 
     // NOTE: 에러 처리를 어떻게 하면 좋을까..?
@@ -31,13 +37,17 @@ function SignUp() {
     const handleSubmit = () => {
         // TODO : 회원가입 로직
         console.log('submit')
+
+        navigate('/welcome')
     }
 
     return (
         <SignupLayout>
             <Flex>
                 <Header>
-                    <BackIcon />
+                    <Link to="/">
+                        <BackIcon />
+                    </Link>
                 </Header>
                 <Heading>정보를 입력해주세요</Heading>
                 <InputItem
@@ -47,6 +57,7 @@ function SignUp() {
                     value={id}
                     placeholder="아이디 입력"
                     isError={!isValidId}
+                    errorMsg="올바른 아이디를 입력해주세요."
                 />
                 <InputItem
                     type="password"
@@ -55,6 +66,7 @@ function SignUp() {
                     value={password}
                     placeholder="비밀번호 입력"
                     isError={!isValidPassword}
+                    errorMsg="문자, 숫자를 한개 이상 포함한 8자 이상의 비밀번호를 입력해주세요."
                 />
                 <InputItem
                     type="password"
@@ -63,6 +75,7 @@ function SignUp() {
                     value={passwordConfirm}
                     placeholder="비밀번호 재입력"
                     isError={!isValidPasswordConfirm}
+                    errorMsg="같은 비밀번호를 입력해주세요. "
                 />
             </Flex>
 

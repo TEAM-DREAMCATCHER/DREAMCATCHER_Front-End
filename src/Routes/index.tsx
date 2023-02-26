@@ -4,6 +4,7 @@ import Home from '../pages/home'
 import ErrorPage from '../pages/ErrorPage'
 import SignUp from '../pages/signup'
 import Onboarding from '../pages/onboarding'
+import Welcome from '@/pages/welcome'
 import Community from '../pages/community/community'
 
 const router = createBrowserRouter([
@@ -11,6 +12,12 @@ const router = createBrowserRouter([
         path: '/',
         element: <Onboarding />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                path: 'community',
+                element: <Community />,
+            },
+        ],
     },
     {
         path: '/signup',
@@ -22,6 +29,11 @@ const router = createBrowserRouter([
                 element: <Community />,
             },
         ],
+    },
+    {
+        path: '/welcome',
+        element: <Welcome />,
+        errorElement: <ErrorPage />,
     },
 ])
 

@@ -1,5 +1,3 @@
-import ErrorPage from '@/pages/ErrorPage'
-import Home from '@/pages/home'
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Home from '../pages/home'
@@ -19,6 +17,11 @@ const router = createBrowserRouter([
         path: '/',
         element: <Onboarding />,
         errorElement: <ErrorPage />,
+    },
+    {
+        path: '/home',
+        errorElement: <ErrorPage />,
+        element: <Home />,
     },
     {
         path: '/signup',

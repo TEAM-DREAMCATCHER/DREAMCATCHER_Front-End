@@ -8,29 +8,16 @@ import Onboarding from '../pages/onboarding'
 import Welcome from '@/pages/welcome'
 import Community from '../pages/community/community'
 
-
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Onboarding />,
         errorElement: <ErrorPage />,
-        children: [
-            {
-                path: 'community',
-                element: <Community />,
-            },
-        ],
     },
     {
         path: '/signup',
         element: <SignUp />,
         errorElement: <ErrorPage />,
-        children: [
-            {
-                path: 'community',
-                element: <Community />,
-            },
-        ],
     },
     {
         path: '/welcome',
@@ -41,7 +28,12 @@ const router = createBrowserRouter([
         path: '/recording',
         element: <Recording />,
         errorElement: <ErrorPage />,
-    }
+    },
+    {
+        path: '/community',
+        element: <Community />,
+        errorElement: <ErrorPage />,
+    },
 ])
 
 export default router

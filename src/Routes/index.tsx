@@ -35,12 +35,6 @@ const router = createBrowserRouter([
         path: '/community',
         element: <Community />,
         errorElement: <ErrorPage />,
-        children: [
-            {
-                path: 'Detail/:id',
-                element: <Detail />,
-            },
-        ],
     },
     {
         path: '/test',

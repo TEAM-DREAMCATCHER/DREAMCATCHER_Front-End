@@ -1,7 +1,6 @@
 import { CategoryLayout, CategoryBox, CategoryButton } from './style'
-import { useState } from 'react';
+import { useState } from 'react'
 
-    
 export default function index() {
     return (
         <>

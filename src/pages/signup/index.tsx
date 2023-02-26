@@ -1,15 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { SignupLayout, Flex, Header } from '@/pages/signup/styles'
-import { Heading, Button } from '@/pages/welcome/styles'
+import { SignupLayout, Flex, Header, Button } from '@/pages/signup/styles'
+import { Heading } from '@/pages/welcome/styles'
 import useInput from '@/pages/signup/useInput'
 import InputItem from '@/components/signup/InputItem'
-import BackIcon from '@/icons/back-icon'
+import { idDuplicateCheckAPI, signUpAPI } from '@/apis/auth'
+import BackIcon from '@/components/common/icons/BackIcon'
 
 const validId = async (id: string): Promise<boolean> => {
-    // TODO : api 연결
-    // const isDuplicate = await idDuplicateAPI(id)
-    const isDuplicate = true
-    return !isDuplicate
+    const isValidId = await idDuplicateCheckAPI(id)
+    return isValidId
 }
 
 const validPassword = (password: string): boolean => {
@@ -23,22 +22,20 @@ const validPassword = (password: string): boolean => {
 function SignUp() {
     const navigate = useNavigate()
 
-    const [id, handleIdChange, isValidId, isErrorId] = useInput('', validId)
-    const [password, handlePasswordChange, isValidPassword, isErrorPassword] = useInput(
-        '',
-        validPassword
-    )
+    const [id, handleIdChange, isValidId] = useInput('', validId)
+    const [password, handlePasswordChange, isValidPassword] = useInput('', validPassword)
     const [passwordConfirm, handlePasswordConfirmChange] = useInput()
 
-    // NOTE: 에러 처리를 어떻게 하면 좋을까..?
     const isValidPasswordConfirm = password === passwordConfirm
     const isSubmitDisabled = !(isValidId && isValidPassword && isValidPasswordConfirm)
 
-    const handleSubmit = () => {
-        // TODO : 회원가입 로직
-        console.log('submit')
-
-        navigate('/welcome')
+    const handleSubmit = async () => {
+        try {
+            await signUpAPI(id, password)
+            navigate('/welcome')
+        } catch (error) {
+            console.log('error: ', error)
+        }
     }
 
     return (

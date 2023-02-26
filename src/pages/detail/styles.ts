@@ -1,10 +1,20 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+
+export const Layout = styled.div`
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    min-height: 100vh;
+    background: #12121b;
+    color: #ffffff;
+`
 
 export const PostingSection = styled.section`
     width: 430px;
     height: 932px;
-    background-color: black;
     padding: 20px;
+    color: white;
 `
 
 export const HeaderBox = styled.div`
@@ -13,7 +23,7 @@ export const HeaderBox = styled.div`
     margin: 20px;
 `
 
-export const BackButton = styled.button`
+export const BackButton = styled(Link)`
     color: white;
     cursor: pointer;
     &:hover {

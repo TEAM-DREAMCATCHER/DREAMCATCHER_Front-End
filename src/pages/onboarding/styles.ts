@@ -1,3 +1,4 @@
+import { AuthButtonStyled } from '@/components/common/styles/button'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -68,8 +69,7 @@ export const TitleBox = styled.div`
 `
 
 export const Title = styled.h2`
-    font-weight: 700;
-    font-size: 26px;
+    ${({ theme }) => theme.fonts.title26}
     line-height: 31px;
     text-align: center;
 
@@ -85,17 +85,8 @@ export const Desc = styled.p`
     color: #b0b0b0;
 `
 
-export const SignupButton = styled(Link)`
-    width: 100%;
-    height: 58px;
-
-    background: linear-gradient(126.87deg, #b9a1cf 16.19%, #635273 83.65%);
-    border-radius: 29px;
-
-    font-weight: 600;
+export const Button = styled(AuthButtonStyled)`
     font-size: 16px;
-    line-height: 19px;
-    color: #000000;
 
     display: flex;
     align-items: center;
@@ -103,9 +94,6 @@ export const SignupButton = styled(Link)`
     gap: 20px;
 
     margin-top: 74px;
-    &:disabled {
-        opacity: 0.5;
-    }
 `
 
 export const SigninButton = styled(Link)`

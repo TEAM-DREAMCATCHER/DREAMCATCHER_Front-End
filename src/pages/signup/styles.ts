@@ -3,15 +3,17 @@ import styled from 'styled-components'
 export const Header = styled.header`
     height: 58px;
 `
-
-export const Wrapper = styled.div`
+export const Layout = styled.div`
     width: 100%;
     max-width: 430px;
     margin: auto;
     min-height: 100vh;
     background: #12121b;
-    padding: 24px 20px 34px;
     color: #ffffff;
+`
+
+export const SignupLayout = styled(Layout)`
+    padding: 24px 20px 34px;
 
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 import BackIcon from '../../icons/back-icon'
-import { Wrapper, Button, Header, Heading, Flex } from './styles'
+import { SignupLayout, Button, Header, Heading, Flex } from './styles'
 import InputItem from '../../components/signup/InputItem'
 import useInput from './useInput'
 import { idDuplicateAPI } from '../../apis/auth'
@@ -34,7 +34,7 @@ function SignUp() {
     }
 
     return (
-        <Wrapper>
+        <SignupLayout>
             <Flex>
                 <Header>
                     <BackIcon />
@@ -69,7 +69,7 @@ function SignUp() {
             <Button onClick={handleSubmit} disabled={isSubmitDisabled}>
                 회원가입
             </Button>
-        </Wrapper>
+        </SignupLayout>
     )
 }
 

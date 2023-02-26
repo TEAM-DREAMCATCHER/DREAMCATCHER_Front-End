@@ -1,5 +1,5 @@
+import CalendarIcon from '@/components/common/icons/CalendarIcon'
 import { CalendarLayout, CalendarTop } from '@/components/home/calendar/styles'
-import CalendarIcon from '@/icons/calendar-icon'
 
 function Calendar() {
     return (

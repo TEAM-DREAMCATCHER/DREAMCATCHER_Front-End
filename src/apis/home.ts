@@ -52,6 +52,7 @@ export const getPostEmojisAPI = async (year: number, month: number): Promise<Emo
 }
 
 export const getTest = async () => {
+    // NOTE: test 중
     // const response = await request.get(
     //     'https://hgsz3wlmc8.execute-api.ap-northeast-2.amazonaws.com/default/myDreams'
     // )

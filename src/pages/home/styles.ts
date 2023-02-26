@@ -18,24 +18,3 @@ export const Header = styled.header`
     justify-content: flex-end;
     gap: 12px;
 `
-
-export const Heading = styled.h1`
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    display: flex;
-
-    color: rgba(238, 239, 243, 0.95);
-    margin-top: 63px;
-    margin-bottom: 18px;
-`
-
-export const SubHeading = styled.p`
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-
-    /* white */
-
-    color: rgba(238, 239, 243, 0.95);
-`

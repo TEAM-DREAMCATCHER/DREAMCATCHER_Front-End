@@ -10,7 +10,7 @@ export const CalendarLayout = styled.div`
     overflow-y: hidden;
     overflow-x: auto;
     left: -10px;
-
+    margin-top: 34px;
     &::-webkit-scrollbar {
         width: 2px;
     }
@@ -25,6 +25,21 @@ export const CalendarLayout = styled.div`
     }
 `
 
+export const EmptyBox = styled.div`
+    text-align: center;
+    margin: 54px auto 0;
+
+    ${({ theme }) => theme.fonts.text13}
+    ${({ theme }) => theme.layouts.flexCenterColumn}
+    gap: 6px;
+    line-height: 20px;
+
+    background: ${({ theme }) => theme.colors.linear.purple};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+`
+
 export const ShineBox = styled.div`
     width: 40px;
     height: 40px;
@@ -36,4 +51,22 @@ export const ShineBox = styled.div`
     background-color : ${({ theme }) => theme.colors.white};
 
     border-radius: 50%;
+`
+
+export const Heading = styled.h1`
+    line-height: 29px;
+    display: flex;
+    margin-top: 63px;
+    margin-bottom: 18px;
+
+    ${({ theme }) => theme.fonts.title24}
+    color: ${({ theme }) => theme.colors.white};
+`
+
+export const SubHeading = styled.p`
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: ${({ theme }) => theme.colors.white};
 `

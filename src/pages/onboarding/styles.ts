@@ -1,29 +1,29 @@
 import { AuthButtonStyled } from '@/components/common/styles/button'
+import { Layout } from '@/components/common/styles/layout'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-// NOTE: 다른 화면과 중복되는 layout
-export const Layout = styled.div`
-    width: 100%;
-    max-width: 430px;
-    margin: auto;
-    min-height: 100vh;
-    background: #12121b;
-    color: #ffffff;
-`
-
 export const OnboardingLayout = styled(Layout)`
-    padding: 400px 20px 150px;
+    padding: 110px 20px 150px;
+    height: 100vh;
+    max-height: fit-content;
 `
 
 export const CarouselBox = styled.div`
-    width: 250px;
+    width: 265px;
+
     overflow-x: hidden;
     margin: auto;
     position: relative;
-    height: 170px;
+    padding-bottom: 30px;
 `
+export const CarouselImgBox = styled.div`
+    width: 265px;
+    height: 230px;
 
+    margin-bottom: 40px;
+    ${({ theme }) => theme.layouts.flexCenter}
+`
 export const CarouselNav = styled.div`
     position: absolute;
     bottom: 0;
@@ -39,8 +39,8 @@ export const CarouselNavItem = styled.li<{ isCurrent?: boolean }>`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-
-    background-color: ${(props) => (props?.isCurrent ? '#fff' : '#D9D9D9')};
+    background-color: ${({ theme }) => theme.colors.white};
+    opacity: ${(props) => (props?.isCurrent ? '1' : '0.3')};
 `
 
 export const CarouselList = styled.ul<{ idx: number }>`
@@ -48,7 +48,7 @@ export const CarouselList = styled.ul<{ idx: number }>`
     display: flex;
     flex-wrap: nowrap;
 
-    transform: translateX(${(props) => -250 * props.idx}px);
+    transform: translateX(${(props) => -265 * props.idx}px);
 
     &::after {
         content: '';
@@ -59,9 +59,9 @@ export const CarouselList = styled.ul<{ idx: number }>`
 
 export const CarouselItem = styled.li`
     text-align: center;
-    width: 250px;
-    min-width: 250px;
-    height: 125px;
+    width: 265px;
+    min-width: 265px;
+    /* height: 125px; */
 `
 
 export const TitleBox = styled.div`

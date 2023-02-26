@@ -1,4 +1,4 @@
-import { InputItemBox, Input, IconBox } from '@/components/signup/InputItem/styles'
+import { InputItemBox, Input, IconBox, InputErrorMsg } from '@/components/signup/InputItem/styles'
 import CheckIcon from '@/icons/check-icon'
 
 interface InputItemProps {
@@ -7,10 +7,20 @@ interface InputItemProps {
     placeholder: string
     name: string
     type: 'text' | 'password'
+
     isError?: boolean
+    errorMsg?: string
 }
 
-function InputItem({ type, name, onChange, value, placeholder, isError }: InputItemProps) {
+function InputItem({
+    type,
+    name,
+    onChange,
+    value,
+    placeholder,
+    isError,
+    errorMsg,
+}: InputItemProps) {
     const isValid = value !== '' && !isError
 
     return (
@@ -22,6 +32,7 @@ function InputItem({ type, name, onChange, value, placeholder, isError }: InputI
                 value={value}
                 placeholder={placeholder}
             />
+            {value !== '' && isError && <InputErrorMsg>{errorMsg}</InputErrorMsg>}
             {isValid && (
                 <IconBox>
                     <CheckIcon />

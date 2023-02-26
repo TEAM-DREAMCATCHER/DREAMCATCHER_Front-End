@@ -3,6 +3,7 @@ import { SignupLayout, Button, Header, Heading, Flex } from './styles'
 import InputItem from '../../components/signup/InputItem'
 import useInput from './useInput'
 import { idDuplicateAPI } from '../../apis/auth'
+import { Link, useNavigate } from 'react-router-dom'
 
 const validId = async (id: string): Promise<boolean> => {
     // TODO : api 연결
@@ -20,6 +21,8 @@ const validPassword = (password: string): boolean => {
 }
 
 function SignUp() {
+    const navigate = useNavigate()
+
     const [id, handleIdChange, isValidId] = useInput('', validId)
     const [password, handlePasswordChange, isValidPassword] = useInput('', validPassword)
     const [passwordConfirm, handlePasswordConfirmChange] = useInput()
@@ -31,13 +34,17 @@ function SignUp() {
     const handleSubmit = () => {
         // TODO : 회원가입 로직
         console.log('submit')
+
+        navigate('/welcome')
     }
 
     return (
         <SignupLayout>
             <Flex>
                 <Header>
-                    <BackIcon />
+                    <Link to="/">
+                        <BackIcon />
+                    </Link>
                 </Header>
                 <Heading>정보를 입력해주세요</Heading>
                 <InputItem

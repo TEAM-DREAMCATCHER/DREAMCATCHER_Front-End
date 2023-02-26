@@ -12,3 +12,15 @@ export const idDuplicateCheckAPI = async (id: string): Promise<boolean> => {
         throw error
     }
 }
+
+export const signUpAPI = async (id: string, password: string): Promise<boolean> => {
+    try {
+        const response = await axios.post(
+            SIGN_UP_BASE_URL + '?username=' + id + '&password=' + password
+        )
+
+        return response.data.result
+    } catch (error) {
+        throw error
+    }
+}

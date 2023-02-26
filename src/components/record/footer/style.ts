@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import calendarIcn from '../../../assets/icn_calendar.png'
 import checkActiveBtn from '../../../assets/btn_check_active.png'
 
@@ -10,22 +12,29 @@ export const Footer = styled.footer`
     align-items: center;
 `
 
-export const Date = styled.p`
+export const Date = styled.div`
     display: flex;
     align-items: center;
-    font-family: 'Pretendard';
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
 
-    &::before {
-        content: '';
-        display: inline-block;
+    label {
         width: 24px;
         height: 22px;
         margin-right: 2px;
         background: center / 100% no-repeat url(${calendarIcn});
+        cursor: pointer;
     }
+`
+
+export const SDatePicker = styled(DatePicker)`
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    vertical-align: top;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
 `
 
 export const Checkbox = styled.div`
@@ -36,7 +45,6 @@ export const Checkbox = styled.div`
         font-family: 'Pretendard';
         font-weight: 700;
         font-size: 12px;
-        line-height: 14px;
         cursor: pointer;
     }
 

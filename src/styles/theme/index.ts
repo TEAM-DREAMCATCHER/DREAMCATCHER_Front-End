@@ -9,6 +9,7 @@ import layouts from '@/styles/theme/layouts'
 const theme = {
     fonts,
     colors,
+    layouts,
 }
 
 export default theme

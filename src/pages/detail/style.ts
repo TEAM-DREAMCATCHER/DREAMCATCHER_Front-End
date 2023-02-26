@@ -15,11 +15,17 @@ export const HeaderBox = styled.div`
 
 export const BackButton = styled.button`
     color: white;
+    cursor: pointer;
+    &:hover {
+        opacity: 70%;
+    }
 `
 
 export const EmojiBox = styled.div`
+    height: 150px;
     font-size: 64px;
     text-align: center;
+    padding: 40px 0;
 `
 
 export const PostingBox = styled.div``
@@ -33,7 +39,10 @@ export const UserBox = styled.div`
 
 export const ImgBox = styled.div``
 
-export const IdBox = styled.div``
+export const IdBox = styled.div`
+    margin-left: 12px;
+    font-size: 14px;
+`
 
 export const ContentBox = styled.div`
     margin: 20px;
@@ -41,6 +50,7 @@ export const ContentBox = styled.div`
 
 export const ContentParagraph = styled.p`
     line-height: 22px;
+    font-size: 16px;
 `
 
 export const FooterBox = styled.div`
@@ -49,6 +59,11 @@ export const FooterBox = styled.div`
     margin: 20px;
 `
 
-export const LikeBox = styled.div``
+export const LikeBox = styled.div`
+    font-size: 14px;
+`
 
-export const TimeBox = styled.div``
+export const TimeBox = styled.div`
+    font-size: 16px;
+    color: #9e9e9e;
+`

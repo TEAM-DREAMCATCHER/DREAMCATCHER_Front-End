@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ProfileImage from './Profile'
 import {
     BackButton,
     ContentBox,
@@ -22,7 +23,7 @@ export default function Detail() {
         '이 글은 다른 사람의 꿈기록입니다!!!!!내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용'
     )
     const [like, setLike] = useState('1.0k')
-    const [time, setTime] = useState('6시간전')
+    const [time, setTime] = useState('6시간 전')
 
     return (
         <>
@@ -36,7 +37,7 @@ export default function Detail() {
                 <EmojiBox>{/* <Emoji unified={.emoji} size={50} /> */}😁</EmojiBox>
                 <PostingBox>
                     <UserBox>
-                        <ImgBox>이미지</ImgBox>
+                        <ImgBox>{<ProfileImage />}</ImgBox>
                         <IdBox>{nickName}</IdBox>
                     </UserBox>
                     <ContentBox>

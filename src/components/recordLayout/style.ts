@@ -38,16 +38,20 @@ export const EmojiButton = styled.button`
 export const EmojiDescription = styled.div`
     height: 16px;
     font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
     font-size: 14px;
     display: flex;
     text-align: center;
     align-items: center;
     color: #b9a1cf;
     margin-top: 10px;
+    background-color: linear-gradient(126.87deg, #635273 16.19%, #b9a1cf 83.65%);
 `
 
 export const DescriptionHeader = styled.header`
-    position: fixed;
+    position: absolute;
     top: 210px;
     width: 390px;
     height: 25px;
@@ -55,4 +59,26 @@ export const DescriptionHeader = styled.header`
     font-weight: 600;
     line-height: 24px;
     font-family: 'Pretendard';
+`
+
+export const DescriptionContainer = styled.div`
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`
+
+export const DescriptionTextArea = styled.textarea`
+    resize: none;
+    background-color: #1d1a23;
+    color: white;
+    font-size: 16px;
+    font-family: 'Pretendard';
+    width: 50%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
 `

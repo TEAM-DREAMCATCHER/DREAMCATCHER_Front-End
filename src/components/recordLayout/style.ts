@@ -22,9 +22,8 @@ export const EmojiContainer = styled.div`
     align-items: center;
     margin-top: 15px;
     padding: 10px 0;
-    Emoji {
-        z-index: 1;
-    }
+    position: absolute;
+    z-index: 100;
 `
 
 export const DefaultImage = styled.img`

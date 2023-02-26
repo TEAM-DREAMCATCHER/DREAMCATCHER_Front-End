@@ -1,6 +1,5 @@
 import { SortOptionLayout, SortOptionList, SortOptionSpan, SortOptionItem } from './style'
 
-    
 export default function SortOption() {
     return (
         <>

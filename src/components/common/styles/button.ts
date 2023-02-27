@@ -9,7 +9,7 @@ export const AuthButtonStyled = styled.button`
     border-radius: 29px;
 
     color: #000000;
-
+    cursor: pointer;
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;

@@ -30,11 +30,10 @@ export const EmojiContainer = styled.div`
     margin-top: 27px;
 `
 
-export const SEmoji = styled(Emoji)`
+export const SEmoji = styled.div`
     position: fixed;
-    z-index: 99;
-    top: 50%;
-    left: 50%;
+    z-index: 10;
+    top: 310px;
 `
 
 export const DefaultImage = styled.img`

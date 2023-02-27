@@ -14,6 +14,7 @@ export const Footer = styled.footer`
 export const Date = styled.div`
     display: flex;
     align-items: center;
+    max-width: 50%;
 
     label {
         width: 24px;
@@ -36,6 +37,7 @@ export const SDatePicker = styled(DatePicker)`
 `
 
 export const Checkbox = styled.div`
+    min-width: 115px;
     display: flex;
     align-items: center;
 

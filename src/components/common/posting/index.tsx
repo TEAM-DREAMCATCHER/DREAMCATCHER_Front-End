@@ -41,8 +41,14 @@ export default function Posting({
         nowTime.getHours(),
         nowTime.getMinutes(),
     ]
-
-    if (year === nowYear && month === nowMonth && day === nowDay) {
+    let dateInfo = `${year}.${('0' + month).slice(-2)}.${('0' + day).slice(-2)}`
+    if (year === nowYear && month === nowMonth + 1 && day === nowDay) {
+        let diff = nowHour - hour
+        if (diff === 0) {
+            dateInfo = '1시간 이내'
+        } else {
+            dateInfo = `${nowHour - hour}시간 전`
+        }
     }
 
     const convertLikeCountToK = (count: number) => {
@@ -72,7 +78,7 @@ export default function Posting({
                     <LikeIcon />
                     <LikeCount>{convertLikeCountToK(likeCount)}</LikeCount>
 
-                    <TimeParagraph>{createdAt}</TimeParagraph>
+                    <TimeParagraph>{dateInfo}</TimeParagraph>
                 </FooterBox>
             </PostingItem>
         </>

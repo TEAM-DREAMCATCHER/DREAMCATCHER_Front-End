@@ -31,6 +31,10 @@ export const BackButton = styled(Link)`
     }
 `
 
+export const ShareButton = styled.button`
+    cursor: pointer;
+`
+
 export const EmojiBox = styled.div`
     height: 150px;
     font-size: 64px;
@@ -42,9 +46,25 @@ export const PostingBox = styled.div``
 
 export const UserBox = styled.div`
     line-height: 20px;
-    align-items: center;
+    justify-content: space-between;
     display: flex;
     margin: 20px;
+`
+
+export const UserInfoBox = styled.div`
+    align-items: center;
+    display: flex;
+`
+
+export const ManageBox = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`
+
+export const ManageButton = styled.button`
+    cursor: pointer;
+    color: white;
+    margin: 0 4px;
 `
 
 export const ImgBox = styled.div``
@@ -72,6 +92,10 @@ export const FooterBox = styled.div`
 
 export const LikeBox = styled.div`
     font-size: 14px;
+`
+
+export const LikeButton = styled.button`
+    cursor: pointer;
 `
 
 export const TimeBox = styled.div`

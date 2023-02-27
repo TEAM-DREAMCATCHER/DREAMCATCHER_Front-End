@@ -34,7 +34,7 @@ export const EmptyBox = styled.div`
     ${({ theme }) => theme.layouts.flexCenterColumn}
     ${({ theme }) => theme.fonts.text13}
     background: ${({ theme }) => theme.colors.linear.purple};
-
+    align-items: center;
     text-align: center;
     margin: 54px auto 0;
     gap: 6px;

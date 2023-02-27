@@ -1,4 +1,3 @@
-import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Home from '../pages/home'
 import ErrorPage from '../pages/ErrorPage'
@@ -10,12 +9,17 @@ import Community from '../pages/community/community'
 import Test from '../pages/Test/test'
 import Signin from '@/pages/signin'
 import Detail from '@/pages/detail'
-
+import Landing from '@/pages/Landing'
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Onboarding />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/landing',
+        element: <Landing />,
         errorElement: <ErrorPage />,
     },
     {

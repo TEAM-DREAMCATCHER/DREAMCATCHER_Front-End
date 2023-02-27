@@ -27,6 +27,10 @@ export const CalendarLayout = styled.div`
 `
 
 export const EmptyBox = styled.div`
+    ${({ theme }) => theme.layouts.flexCenterColumn}
+    ${({ theme }) => theme.fonts.text13}
+    background: ${({ theme }) => theme.colors.linear.purple};
+
     text-align: center;
     margin: 54px auto 0;
     gap: 6px;
@@ -35,39 +39,32 @@ export const EmptyBox = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
-    ${({ theme }) => theme.layouts.flexCenterColumn}
-    ${({ theme }) => theme.fonts.text13}
-    background: ${({ theme }) => theme.colors.linear.purple};
 `
 
 export const ShineBox = styled.div`
+    ${({ theme }) => theme.effects.shine.main}
+    ${({ theme }) => theme.layouts.flexCenter}
+    background-color : ${({ theme }) => theme.colors.white};
+
     width: 40px;
     height: 40px;
     min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     border-radius: 50%;
-    ${({ theme }) => theme.effects.shine.main}
-    background-color : ${({ theme }) => theme.colors.white};
 `
 
 export const Heading = styled.h1`
+    ${({ theme }) => theme.fonts.title24}
+    color: ${({ theme }) => theme.colors.white};
+
     line-height: 29px;
     display: flex;
     margin-top: 63px;
     margin-bottom: 18px;
-
-    ${({ theme }) => theme.fonts.title24}
-    color: ${({ theme }) => theme.colors.white};
 `
 
 export const SubHeading = styled.p`
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-
+    ${({ theme }) => theme.fonts.title24}
     color: ${({ theme }) => theme.colors.white};
+
+    line-height: 29px;
 `

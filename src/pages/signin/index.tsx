@@ -1,9 +1,9 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { loginAPI } from '@/apis/auth'
+import { Button, SigninLayout, Header, Heading, Main, SignupButton } from '@/pages/signin/styles'
 import BackIcon from '@/components/common/icons/BackIcon'
 import InputItem from '@/components/signup/InputItem'
-import { Button, SigninLayout, Header, Heading, Main, SignupButton } from '@/pages/signin/styles'
 import useInput from '@/pages/signup/useInput'
-import { Link, useNavigate } from 'react-router-dom'
 
 function Signin() {
     const navigate = useNavigate()
@@ -19,6 +19,7 @@ function Signin() {
             alert('로그인에 실패했습니다.')
         }
     }
+
     return (
         <SigninLayout>
             <Header>

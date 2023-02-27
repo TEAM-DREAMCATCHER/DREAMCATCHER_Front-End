@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react'
 import { RecordState } from './types'
-import EmojiPicker from 'emoji-picker-react'
+import EmojiPicker, { Emoji } from 'emoji-picker-react'
 import {
     H2,
     EmojiDescription,
@@ -53,13 +53,17 @@ function RecordLayout() {
                 <EmojiContainer>
                     <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
                         {recordState.emoji ? (
-                            <SEmoji unified={recordState.emoji} size={50} />
+                            <Emoji unified={recordState.emoji} size={50} />
                         ) : (
                             <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
                         )}
                     </EmojiButton>
                     <EmojiDescription>떠오르는 잔상을 이모지로 표현해보세요</EmojiDescription>
-                    {showPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
+                    {showPicker && (
+                        <SEmoji>
+                            <EmojiPicker onEmojiClick={handleEmojiClick} />
+                        </SEmoji>
+                    )}
                 </EmojiContainer>
             </section>
             <section>

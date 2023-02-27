@@ -8,25 +8,26 @@ export const InputItemBox = styled.div`
 `
 
 export const InputErrorMsg = styled.p`
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    ${({ theme }) => theme.fonts.text14};
+
     color: #e03223;
+    line-height: 20px;
 
     margin: 8px 24px;
 `
 
 export const Input = styled.input`
+    ${({ theme }) => theme.fonts.title18};
+    color: ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.navy};
+    background: ${({ theme }) => theme.colors.navy};
+
     width: 100%;
     height: 100%;
-    background: #1b1b29;
-    border: 1px solid #1b1b29;
     border-radius: 20px;
     padding: 18px 22px;
-    color: #ffffff;
     height: 58px;
 
-    font-size: 19px;
     &::placeholder {
         opacity: 0.5;
     }
@@ -37,5 +38,6 @@ export const IconBox = styled.div`
     bottom: 0;
     right: 17px;
     margin: auto;
+
     height: fit-content;
 `

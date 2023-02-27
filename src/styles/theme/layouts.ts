@@ -5,6 +5,7 @@ type LayoutKeyType =
     | 'flexBetween'
     | 'flexAround'
     | 'flexEvenly'
+    | 'flexColumn'
     | 'flexStartColumn'
     | 'flexEndColumn'
     | 'flexCenterColumn'
@@ -45,41 +46,39 @@ const layouts: Record<LayoutKeyType, string> = {
       align-items: center;
     `,
     // flex-column
+    flexColumn: `
+      display: flex;
+      flex-direction: column;
+    `,
     flexStartColumn: `
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
     `,
     flexEndColumn: `
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: center;
     `,
     flexCenterColumn: `
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
     `,
     flexBetweenColumn: `
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
     `,
     flexAroundColumn: `
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center;
     `,
     flexEvenlyColumn: `
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      align-items: center;
     `,
 }
 

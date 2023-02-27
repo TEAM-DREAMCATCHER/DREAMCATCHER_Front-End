@@ -15,4 +15,8 @@ export const Container = styled.div`
     background: linear-gradient(180deg, #0b0711 0%, rgba(11, 7, 17, 0.9) 100%);
     border-radius: 30px 30px 0px 0px;
     margin: auto;
+
+    nav {
+        cursor: pointer;
+    }
 `

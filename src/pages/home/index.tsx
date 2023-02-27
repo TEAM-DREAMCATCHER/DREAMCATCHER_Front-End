@@ -1,10 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 
-import AlertIcon from '@/components/common/icons/AlertIcon'
-import MenuIcon from '@/components/common/icons/MenuIcon'
 import Calendar from '@/components/home/calendar'
 import {
-    Header,
     HomeLayout,
     Title,
     TitleBox,
@@ -12,12 +9,15 @@ import {
     DreamContent,
     DreamContainer,
     AddButtonBox,
+    Header,
 } from '@/pages/home/styles'
-import yetDeveloped from '@/utils/yetDeveloped'
 import Navbar from '@/components/common/navbar'
 import AddButton from '@/components/common/AddButton'
 import ForwardIcon from '@/components/common/icons/ForwardIcon'
 import Dream from '@/components/home/Dream'
+import AlertIcon from '@/components/common/icons/AlertIcon'
+import MenuIcon from '@/components/common/icons/MenuIcon'
+import yetDeveloped from '@/utils/yetDeveloped'
 
 function Home() {
     const navigate = useNavigate()

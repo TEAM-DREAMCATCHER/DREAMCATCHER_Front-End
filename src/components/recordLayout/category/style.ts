@@ -7,7 +7,6 @@ export const CategoryList = styled.ul`
     display: flex;
     align-items: center;
     padding: 10px 22px;
-    width: 500px;
     position: relative;
     height: 50px;
     overflow-x: scroll;
@@ -18,12 +17,12 @@ export const CategoryList = styled.ul`
         height: 5px;
     }
     &::-webkit-scrollbar-thumb {
-        width: 100px;
         background: #635273;
         border-radius: 10px;
     }
-    .scrollBar::-webkit-scrollbar-track {
-        background-color: #635273;
+    &::-webkit-scrollbar-track {
+        max-width: 10px;
+        background-color: black;
     }
 `
 export const CategoryItem = styled.li<{ isChosen: Boolean }>`

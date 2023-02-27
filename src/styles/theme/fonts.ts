@@ -1,4 +1,14 @@
-const fonts = {
+type FontKeyType =
+    | 'title26'
+    | 'title24'
+    | 'title20'
+    | 'title16'
+    | 'text14'
+    | 'text13'
+    | 'text12'
+    | 'caption11'
+
+const fonts: Record<FontKeyType, string> = {
     title26: `
       font-weight: 700;
       font-size: 26px;

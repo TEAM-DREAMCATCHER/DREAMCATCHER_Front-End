@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
+interface SortOption {
+    key: number
+    idx: number
+    active: number
+}
 
 export const SortOptionLayout = styled.div`
-    margin-top: 12px;
+    margin: 12px 0 29px;
 `
 export const SortOptionList = styled.ul`
     display: flex;
@@ -10,6 +15,7 @@ export const SortOptionList = styled.ul`
     justify-content: center;
     width: 80px;
     height: 19px;
+    margin: 0 auto;
     padding: 3px 0;
     background: #1d1a23;
     border-radius: 20px;
@@ -20,7 +26,7 @@ export const SortOptionSpan = styled.span`
     margin: 0 6px;
     background: #0b0711;
 `
-export const SortOptionItem = styled.li`
+export const SortOptionItem = styled.li<SortOption>`
     display: flex;
     align-items: center;
     font-size: 11px;
@@ -30,8 +36,9 @@ export const SortOptionItem = styled.li`
     background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);
     -webkit-background-clip: text;
     color: transparent;
-    
-    & span {
+
+    &:first-child::after {
+        content: "";
         display: block;
         width: 4px;
         height: 4px;
@@ -40,12 +47,9 @@ export const SortOptionItem = styled.li`
         border-radius: 50%;
         background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);
     }
-    
-    &.active {
-        color: #fff;
 
-        & span {
-            background: #fff;
-        }
-    }
+    ${(props) =>
+        props.idx == props.active
+            ? ' & span background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);'
+            : ' & span color: #fff;'};
 `

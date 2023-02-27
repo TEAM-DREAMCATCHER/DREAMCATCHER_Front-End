@@ -1,71 +1,84 @@
-const layouts = {
+type LayoutKeyType =
+    | 'flexStart'
+    | 'flexEnd'
+    | 'flexCenter'
+    | 'flexBetween'
+    | 'flexAround'
+    | 'flexEvenly'
+    | 'flexColumn'
+    | 'flexStartColumn'
+    | 'flexEndColumn'
+    | 'flexCenterColumn'
+    | 'flexBetweenColumn'
+    | 'flexAroundColumn'
+    | 'flexEvenlyColumn'
+
+const layouts: Record<LayoutKeyType, string> = {
     // flex-row
     flexStart: `
       display: flex;
-      justify-contents: flex-start;
+      justify-content: flex-start;
       align-items: center;
     `,
     flexEnd: `
       display: flex;
-      justify-contents: flex-end;
+      justify-content: flex-end;
       align-items: center;
     `,
     flexCenter: `
       display: flex;
-      justify-contents: center;
+      justify-content: center;
       align-items: center;
     `,
     flexBetween: `
       display: flex;
-      justify-contents: space-between;
+      justify-content: space-between;
       align-items: center;
     `,
     flexAround: `
       display: flex;
-      justify-contents: space-around;
+      justify-content: space-around;
       align-items: center;
     `,
     flexEvenly: `
       display: flex;
-      justify-contents: space-evenly;
+      justify-content: space-evenly;
       align-items: center;
     `,
     // flex-column
+    flexColumn: `
+      display: flex;
+      flex-direction: column;
+    `,
     flexStartColumn: `
       display: flex;
       flex-direction: column;
-      justify-contents: flex-start;
-      align-items: center;
+      justify-content: flex-start;
     `,
     flexEndColumn: `
       display: flex;
       flex-direction: column;
-      justify-contents: flex-end;
-      align-items: center;
+      justify-content: flex-end;
     `,
     flexCenterColumn: `
       display: flex;
       flex-direction: column;
-      justify-contents: center;
-      align-items: center;
+      justify-content: center;
     `,
     flexBetweenColumn: `
       display: flex;
       flex-direction: column;
-      justify-contents: space-between;
-      align-items: center;
+      justify-content: space-between;
     `,
     flexAroundColumn: `
       display: flex;
       flex-direction: column;
-      justify-contents: space-around;
-      align-items: center;
+      justify-content: space-around;
     `,
     flexEvenlyColumn: `
       display: flex;
       flex-direction: column;
-      justify-contents: space-evenly;
-      align-items: center;
+      justify-content: space-evenly;
     `,
 }
 

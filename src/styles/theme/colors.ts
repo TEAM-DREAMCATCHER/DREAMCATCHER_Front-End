@@ -1,4 +1,20 @@
-const colors = {
+type ColorKeyType =
+    | 'background'
+    | 'linear'
+    | 'angular'
+    | 'white'
+    | 'navy'
+    | 'gray0'
+    | 'gray1'
+    | 'gray2'
+    | 'black'
+
+type ColorType =
+    | Record<'purple' | 'gray' | 'pink', string>
+    | Record<'purple' | 'gray', string>
+    | string
+
+const colors: Record<ColorKeyType, ColorType> = {
     background: ' linear-gradient(180deg, #0B0711 0%, rgba(11, 7, 17, 0.9) 100%);',
     linear: {
         purple: 'linear-gradient(126.87deg, #635273 16.19%, #B9A1CF 83.65%);',

@@ -1,6 +1,7 @@
+import { DetailButton, Layout } from './styles'
 import Category from '@/components/common/category'
+import SortOption from '@/components/common/sortOption'
 import Posting from '@/components/common/posting'
-import { DetailButton } from './style'
 
 export interface Info {
     id: string
@@ -13,7 +14,6 @@ export interface Info {
     pri: boolean
     emoji: string
 }
-
 
 export default function Community() {
     const mock = [
@@ -55,21 +55,24 @@ export default function Community() {
 
     return (
         <>
-            <Category />
-            {mock.map((info) => (
-                <DetailButton
-                    to={`/Community/${info.id}`}
-                    state={{
-                        userId: info.userId,
-                        content: info.content,
-                        createdAt: info.createdAt,
-                        likeCount: info.likeCount,
-                        pri: info.pri,
-                    }}
-                >
-                    <Posting props={info} />
-                </DetailButton>
-            ))}
+            <Layout>
+                <Category />
+                <SortOption />
+                {mock.map((info) => (
+                    <DetailButton
+                        to={`/Community/${info.id}`}
+                        state={{
+                            userId: info.userId,
+                            content: info.content,
+                            createdAt: info.createdAt,
+                            likeCount: info.likeCount,
+                            pri: info.pri,
+                        }}
+                    >
+                        <Posting props={info} />
+                    </DetailButton>
+                ))}
+            </Layout>
         </>
     )
 }

@@ -34,5 +34,5 @@ const ProfileImg = styled.div`
     overflow: hidden;
     background: gray;
     text-align: center;
-    padding: 7px 0;
+    padding: 8px 0;
 `

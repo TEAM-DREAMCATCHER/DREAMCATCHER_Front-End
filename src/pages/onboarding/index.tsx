@@ -10,6 +10,7 @@ import {
     Title,
     TitleBox,
     Button,
+    CarouselImgBox,
 } from '@/pages/onboarding/styles'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -33,6 +34,9 @@ function Onboarding() {
             <CarouselBox>
                 <CarouselList idx={idx}>
                     <CarouselItem>
+                        <CarouselImgBox>
+                            <img src="img/note2.png" alt="note2" width={250} height={214} />
+                        </CarouselImgBox>
                         <TitleBox>
                             <Title>희미했던 꿈을</Title>
                             <Title>선명하게 기록해보아요.</Title>
@@ -41,6 +45,9 @@ function Onboarding() {
                         <Desc>기록해드림에 기록해보세요!</Desc>
                     </CarouselItem>
                     <CarouselItem>
+                        <CarouselImgBox>
+                            <img src="img/calendar2.png" alt="note2" width={247} height={187} />
+                        </CarouselImgBox>
                         <TitleBox>
                             <Title>나의 꿈을</Title>
                             <Title>맘껏 자랑해보세요.</Title>
@@ -49,6 +56,9 @@ function Onboarding() {
                         <Desc>모든 꿈들을 커뮤니티에 공유해보세요!</Desc>
                     </CarouselItem>
                     <CarouselItem>
+                        <CarouselImgBox>
+                            <img src="img/chat2.png" alt="note2" width={250} height={160} />
+                        </CarouselImgBox>
                         <TitleBox>
                             <Title>희미했던 꿈을</Title>
                             <Title>선명하게 기록해보아요.</Title>
@@ -58,9 +68,9 @@ function Onboarding() {
                     </CarouselItem>
                 </CarouselList>
                 <CarouselNav>
-                    <CarouselNavItem isCurrent={idx === 0}></CarouselNavItem>
-                    <CarouselNavItem isCurrent={idx === 1}></CarouselNavItem>
-                    <CarouselNavItem isCurrent={idx === 2}></CarouselNavItem>
+                    <CarouselNavItem isCurrent={idx === 0} onClick={() => setIdx(0)} />
+                    <CarouselNavItem isCurrent={idx === 1} onClick={() => setIdx(1)} />
+                    <CarouselNavItem isCurrent={idx === 2} onClick={() => setIdx(2)} />
                 </CarouselNav>
             </CarouselBox>
             <Link to="/signup">

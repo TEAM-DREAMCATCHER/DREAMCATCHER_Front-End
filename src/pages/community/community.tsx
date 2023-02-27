@@ -3,6 +3,8 @@ import Category from '@/components/common/category'
 import SortOption from '@/components/common/sortOption'
 import Posting from '@/components/common/posting'
 import { useState } from 'react'
+import Header from '@/components/common/header'
+import Navbar from '@/components/common/navbar'
 
 export interface Info {
     id: string
@@ -12,7 +14,7 @@ export interface Info {
     updatedAt: string
     likeCount: number
     category: string
-    pri: boolean
+    pri: boolean // TODO: pub로 수정이 필요할것 같아요!
     emoji: string
 }
 
@@ -135,6 +137,7 @@ export default function Community() {
     return (
         <>
             <Layout>
+                <Header />
                 <Category />
                 <SortOption />
                 {mock.map((info, idx) => {
@@ -171,6 +174,7 @@ export default function Community() {
                         ''
                     )}
                 </MoreBox>
+                <Navbar />
             </Layout>
         </>
     )

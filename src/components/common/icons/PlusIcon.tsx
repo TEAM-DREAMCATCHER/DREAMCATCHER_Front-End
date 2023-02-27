@@ -28,8 +28,8 @@ const PlusIcon = ({ shape }: PlusIconProps) => {
                     y2="12.7655"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#635273" />
-                    <stop offset="1" stop-color="#B9A1CF" />
+                    <stop stopColor="#635273" />
+                    <stop offset="1" stopColor="#B9A1CF" />
                 </linearGradient>
             </defs>
         </svg>

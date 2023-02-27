@@ -10,6 +10,7 @@ import Test from '../pages/Test/test'
 import Signin from '@/pages/signin'
 import Detail from '@/pages/detail'
 import Landing from '@/pages/Landing'
+import ListView from '@/pages/home/ListView'
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
     {
         path: '/test',
         element: <Test />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/list',
+        element: <ListView />,
         errorElement: <ErrorPage />,
     },
 ])

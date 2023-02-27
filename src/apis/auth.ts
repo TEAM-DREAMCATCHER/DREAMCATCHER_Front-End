@@ -20,9 +20,10 @@ export const idDuplicateCheckAPI = async (id: string): Promise<boolean> => {
 
 export const signUpAPI = async (id: string, password: string): Promise<boolean> => {
     try {
-        const response = await axios.post(
-            SIGN_UP_BASE_URL + '?username=' + id + '&password=' + password
-        )
+        const response = await authRequest.get('/signup' + '?username=' + id)
+
+        console.log('response: ', response)
+
         const token = response.data.token
         if (token) {
             localStorage.setItem('access-token', token)

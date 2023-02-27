@@ -56,6 +56,7 @@ export const IdBox = styled.div`
 
 export const ContentBox = styled.div`
     margin: 20px;
+    min-height: 175px;
 `
 
 export const ContentParagraph = styled.p`

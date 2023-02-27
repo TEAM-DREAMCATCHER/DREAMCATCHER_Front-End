@@ -1,3 +1,4 @@
+import BackIcon from '@/components/common/icons/BackIcon'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
 import { useLocation } from 'react-router-dom'
 import {
@@ -27,7 +28,9 @@ export default function Detail() {
                 <PostingSection>
                     <HeaderBox>
                         <div>
-                            <BackButton to="/community"> &lt; </BackButton>
+                            <BackButton to="/community">
+                                <BackIcon />
+                            </BackButton>
                         </div>
                         <div>📢</div>
                     </HeaderBox>

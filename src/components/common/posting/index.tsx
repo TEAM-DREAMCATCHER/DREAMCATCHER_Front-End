@@ -1,6 +1,5 @@
 import LikeIcon from '@/components/common/Like'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
-import { Info } from '@/pages/community/community'
 import {
     ContentParagraph,
     FooterBox,
@@ -12,9 +11,10 @@ import {
     LikeCount,
     TimeParagraph,
 } from './style'
+import { Emoji } from 'emoji-picker-react'
 
 interface PostingProps {
-    nickName: string
+    userId: string
     content: string
     emoji: string
     likeCount: number
@@ -22,7 +22,7 @@ interface PostingProps {
 }
 
 export default function Posting({
-    nickName,
+    userId,
     content,
     emoji,
     likeCount,
@@ -46,9 +46,11 @@ export default function Posting({
                 <HeaderBox>
                     <ProfileBox>
                         <ProfileIcon />
-                        <IdParagraph>{nickName}</IdParagraph>
+                        <IdParagraph>{userId}</IdParagraph>
                     </ProfileBox>
-                    <ProfileEmoji>{emoji}</ProfileEmoji>
+                    <ProfileEmoji>
+                        <Emoji unified={emoji} size={20} />
+                    </ProfileEmoji>
                 </HeaderBox>
                 <ContentParagraph>{content}</ContentParagraph>
                 <FooterBox>

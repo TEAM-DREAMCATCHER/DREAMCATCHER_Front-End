@@ -1,6 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { SignupLayout, Flex, Header, Button } from '@/pages/signup/styles'
-import { Heading } from '@/pages/welcome/styles'
+import { SignupLayout, Flex, Header, Button, Heading } from '@/pages/signup/styles'
 import useInput from '@/pages/signup/useInput'
 import InputItem from '@/components/signup/InputItem'
 import { signUpAPI } from '@/apis/auth'
@@ -65,7 +64,6 @@ function SignUp() {
                     errorMsg="같은 비밀번호를 입력해주세요. "
                 />
             </Flex>
-
             <Button onClick={handleSubmit} disabled={isSubmitDisabled}>
                 회원가입
             </Button>

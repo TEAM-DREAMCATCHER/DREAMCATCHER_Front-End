@@ -25,8 +25,8 @@ const router = createBrowserRouter([
     },
     {
         path: '/home',
-        errorElement: <ErrorPage />,
-        element: <ErrorPage />,
+        errorElement: <Home />,
+        element: <Home />,
     },
     {
         path: '/signup',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
     {
         path: '/community',
         element: <Community />,
-        errorElement: <ErrorPage />,
+        errorElement: <Community />,
     },
     {
         path: '/community/:id',

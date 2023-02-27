@@ -58,16 +58,6 @@ const router = createBrowserRouter([
         element: <Detail />,
         errorElement: <ErrorPage />,
     },
-    {
-        path: '/test',
-        element: <Test />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: '/list',
-        element: <ListView />,
-        errorElement: <ErrorPage />,
-    },
 ])
 
 export default router

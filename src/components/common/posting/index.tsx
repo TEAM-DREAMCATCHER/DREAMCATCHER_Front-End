@@ -1,4 +1,4 @@
-import LikeIcon from '@/components/common/icons/LikeIcon'
+import LikeIcon from '@/components/common/Like'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
 import { Info } from '@/pages/community/community'
 import {
@@ -13,12 +13,32 @@ import {
     TimeParagraph,
 } from './style'
 
-type InfoTypes = {
-    props: Info
+interface PostingProps {
+    nickName: string
+    content: string
+    emoji: string
+    likeCount: number
+    createdAt: string
 }
 
-export default function Posting({ props }: InfoTypes): React.ReactElement {
+export default function Posting({
+    nickName,
+    content,
+    emoji,
+    likeCount,
+    createdAt,
+}: PostingProps): React.ReactElement {
     const loginUser = 'user'
+
+    const convertLikeCountToK = (count: number) => {
+        const thousand = 1000
+        const million = 10000
+
+        if (count >= thousand && count < million) {
+            return count / thousand + 'K'
+        }
+        return count
+    }
 
     return (
         <>
@@ -26,16 +46,16 @@ export default function Posting({ props }: InfoTypes): React.ReactElement {
                 <HeaderBox>
                     <ProfileBox>
                         <ProfileIcon />
-                        <IdParagraph>{props.userId}</IdParagraph>
+                        <IdParagraph>{nickName}</IdParagraph>
                     </ProfileBox>
-                    <ProfileEmoji>{props.userId === loginUser ? '📖' : ''}</ProfileEmoji>
+                    <ProfileEmoji>{emoji}</ProfileEmoji>
                 </HeaderBox>
-                <ContentParagraph>{props.content}</ContentParagraph>
+                <ContentParagraph>{content}</ContentParagraph>
                 <FooterBox>
                     <LikeIcon />
-                    <LikeCount>{props.likeCount}</LikeCount>
+                    <LikeCount>{convertLikeCountToK(likeCount)}</LikeCount>
 
-                    <TimeParagraph>{props.createdAt}</TimeParagraph>
+                    <TimeParagraph>{createdAt}</TimeParagraph>
                 </FooterBox>
             </PostingItem>
         </>

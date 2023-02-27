@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export default function LikeIcon() {
-    const mock = true
+interface LikeProps {
+    heart?: boolean
+}
 
-    // true 값 넘기면 빨간하트 , false 넘기면 회색하트
-
+export default function Like({ heart = false }: LikeProps) {
     return (
         <>
-            {mock ? (
+            {heart ? (
                 <LikeBox>
                     <svg
                         width="10"

@@ -11,7 +11,7 @@ export interface Info {
     updatedAt: string
     likeCount: number
     category: string
-    pri: boolean
+    pri: boolean // TODO: pub로 수정이 필요할것 같아요!
     emoji: string
 }
 
@@ -70,7 +70,7 @@ export default function Community() {
                             pri: info.pri,
                         }}
                     >
-                        <Posting props={info} />
+                        <Posting {...info} nickName={info.id} />
                     </DetailButton>
                 ))}
             </Layout>

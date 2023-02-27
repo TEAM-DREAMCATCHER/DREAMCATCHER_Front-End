@@ -106,19 +106,19 @@ Chore: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같
  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white"/> <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styled components&logoColor=white"/> 
  
 ### Back-end
-<img src="https://img.shields.io/badge/AWS Lambda-FF9900?style=for-the-badge&logo=Vercel&logoColor=white"/>  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>  <img src="https://img.shields.io/badge/Spring Boot
--6DB33F?style=for-the-badge&logo=Springboot&logoColor=white"/> <img src="https://img.shields.io/badge/Express.js-6DB33F?style=for-the-badge&logo=express&logoColor=white"/> <img src ="https://img.shields.io/badge/-TypeScript-informational?&style=for-the-badge&logo=TypeScript&logoColor=white" />
- 
+<img src="https://img.shields.io/badge/AWS Lambda-FF9900?style=for-the-badge&logo=Vercel&logoColor=white"/>  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white"/>  <img src="https://img.shields.io/badge/Express.js-6DB33F?style=for-the-badge&logo=express&logoColor=white"/> <img src ="https://img.shields.io/badge/-TypeScript-informational?&style=for-the-badge&logo=TypeScript&logoColor=white" />    
+
+
  ## 🙋‍♂️ Team DREAMCATCHER 
 
 <table>
   <tbody>
     <tr>
-        <td align="center"><img src="https://avatars.githubusercontent.com/u/112174727?v=4" width="120px;"  ><br /><sub><a href=""><b>@tastekim</b></a></sub><br/></td>
-      <td align="center"><a href="https://github.com/ssxst31"><img src="https://avatars.githubusercontent.com/u/78200199?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@Son-Gyeongi</b></sub></a><br/></td>
-                <td align="center"><a href="https://github.com/solbi9382"><img src="https://avatars.githubusercontent.com/u/49177223?v=4" width="120px;" alt=""/><br /><sub><b>@sumi-0011</b></sub></a><br/></td>
-      <td align="center"><a href="https://github.com/Dae-une"><img src="https://avatars.githubusercontent.com/u/81623931?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@soohyun-dev</b></sub></a><br/></td>
-        <td align="center"><a href="https://github.com/solbi9382"><img src="https://avatars.githubusercontent.com/u/106213724?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@sit-or-seona</b></sub></a><br/></td>
+        <td align="center"><a href="https://github.com/tastekim"><img src="https://avatars.githubusercontent.com/u/112174727?v=4" width="120px;"  ><br /><sub><a href="https://github.com/tastekim"><b>@tastekim</b></sub></a><br/></td>
+      <td align="center"><a href="https://github.com/Son-Gyeongi"><img src="https://avatars.githubusercontent.com/u/78200199?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@Son-Gyeongi</b></sub></a><br/></td>
+                <td align="center"><a href="https://github.com/sumi-0011"><img src="https://avatars.githubusercontent.com/u/49177223?v=4" width="120px;" alt=""/><br /><sub><b>@sumi-0011</b></sub></a><br/></td>
+      <td align="center"><a href="https://github.com/oohyun-dev"><img src="https://avatars.githubusercontent.com/u/81623931?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@soohyun-dev</b></sub></a><br/></td>
+        <td align="center"><a href="https://github.com/sit-or-seona"><img src="https://avatars.githubusercontent.com/u/106213724?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@sit-or-seona</b></sub></a><br/></td>
     </tr>
     <tr>
         <td align="center">PL+BE <br/><span style="font-weight : bold">맛김</span></td>
@@ -128,11 +128,11 @@ Chore: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같
         <td align="center" >FE <br/> <span style="font-weight : bold">라라</span></td>  
     </tr>
     <tr>
-      <td align="center"><a href="https://github.com/billy5982"><img src="https://avatars.githubusercontent.com/u/77972977?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@seo-minjeong</b></sub></a><br/></td>
-      <td align="center"><a href="https://github.com/se030"><img src="https://avatars.githubusercontent.com/u/57941164?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@Luceta</b></sub></a><br/></td>
-      <td align="center"><a href="https://github.com/parkharoi"><img src="https://avatars.githubusercontent.com/u/69101321?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@jaehyeon74</b></sub></a><br/></td>
-      <td align="center"><a href="https://i.pinimg.com/474x/26/46/bc/2646bcf5a93d4f8f640c85afc1287b00.jpg " width="120px;" alt=""/><br /><sub><b>@ozi</b></sub></a><br/></td>
-                <td align="center"><a href="https://github.com/solbi9382"><img src="https://user-images.githubusercontent.com/49177223/221573884-1222feb3-5206-4bd0-bb5a-c1d79f75781b.png" width="120px;" height='120px' alt=""/><br /><sub><b>@루이</b></sub></a><br/></td>
+      <td align="center"><a href="https://github.com/seo-minjeong"><img src="https://avatars.githubusercontent.com/u/77972977?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@seo-minjeong</b></sub></a><br/></td>
+      <td align="center"><a href="https://github.com/Luceta"><img src="https://avatars.githubusercontent.com/u/57941164?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@Luceta</b></sub></a><br/></td>
+      <td align="center"><a href="https://github.com/jaehyeon74"><img src="https://avatars.githubusercontent.com/u/69101321?s=96&v=4" width="120px;" alt=""/><br /><sub><b>@jaehyeon74</b></sub></a><br/></td>
+      <td align="center">  <img src="https://user-images.githubusercontent.com/49177223/221578600-b22eef58-0597-4b16-88a8-cc0963ba7dcd.jpg" width="120px;" height='120px' alt=""/><br /><sub><b>@ozi</b></sub></a><br/></td>
+                <td align="center">  <img src="https://user-images.githubusercontent.com/49177223/221573884-1222feb3-5206-4bd0-bb5a-c1d79f75781b.png" width="120px;" height='120px' alt=""/><br /><sub><b>@루이</b></sub></a><br/></td>
     </tr>
     <tr>
         <td align="center">FE <br/><span style="font-weight : bold">조이</span></td>
@@ -143,9 +143,7 @@ Chore: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같
     </tr>
   </tbody>
 </table>
-
  
-
 <br>
  
  ## 👨‍⚖️ 팀 컨벤션

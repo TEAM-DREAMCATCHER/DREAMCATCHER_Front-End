@@ -1,19 +1,20 @@
+import { Emoji } from 'emoji-picker-react'
 import styled from 'styled-components'
 
 export const StyledLayout = styled.div`
     max-width: 430px;
 
     section {
-        margin-top: 60px;
+        margin-top: 50px;
     }
 
     section + section {
-        margin-top: 87px;
+        margin-top: 60px;
     }
 `
 
 export const H2 = styled.h2`
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     vertical-align: top;
     font-family: 'Pretendard';
     font-size: 20px;
@@ -26,8 +27,14 @@ export const EmojiContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 36px;
-    z-index: 100;
+    margin-top: 27px;
+`
+
+export const SEmoji = styled(Emoji)`
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
 `
 
 export const DefaultImage = styled.img`

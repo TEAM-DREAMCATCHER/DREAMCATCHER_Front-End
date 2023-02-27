@@ -116,9 +116,9 @@ const ListView = () => {
     return (
         <HomeLayout>
             <Header>
-                <button onClick={() => navigate(-1)}>
+                <GobackButton onClick={() => navigate('/home')}>
                     <BackIcon />
-                </button>
+                </GobackButton>
                 <CalendarIcon />
             </Header>
             <main>
@@ -149,6 +149,10 @@ const ListView = () => {
 }
 
 export default ListView
+
+const GobackButton = styled.button`
+    cursor: pointer;
+`
 
 const HomeLayout = styled(Layout)`
     display: flex;

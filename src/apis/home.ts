@@ -48,7 +48,9 @@ export const getPostEmojisAPI = async (year: number, month: number): Promise<Emo
     const response = await lambdaRequest.get('/myDreams')
     // TODO : return type 정의
     const emojiData = response.data.map(({ postId, emoji }) => ({ id: postId, emoji: emoji }))
+    console.log('emojiData: ', emojiData)
     return emojiData
+    // return DUMMY_EMOJI
 }
 
 export const getTest = async () => {
@@ -60,6 +62,12 @@ export const getTest = async () => {
 
 export const getMyDreamsAPI = async () => {
     const response = await lambdaRequest.get('/myDreams')
+    console.log('getMyDreamsAPI response: ', response)
 
     return response.data
+}
+
+export const getCurrentDreamsAPI = async () => {
+    const response = await lambdaRequest.get('/getCurrentDreams')
+    console.log('response: ', response)
 }

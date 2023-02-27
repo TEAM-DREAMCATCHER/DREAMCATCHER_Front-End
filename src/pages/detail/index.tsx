@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import ProfileIcon from '@/components/common/icons/ProfileIcon'
 import { useLocation } from 'react-router-dom'
-import ProfileImage from './Profile'
 import {
     BackButton,
     ContentBox,
@@ -35,7 +34,7 @@ export default function Detail() {
                     <EmojiBox>{/* <Emoji unified={.emoji} size={50} /> */}😁</EmojiBox>
                     <PostingBox>
                         <UserBox>
-                            <ImgBox>{<ProfileImage />}</ImgBox>
+                            <ImgBox>{<ProfileIcon />}</ImgBox>
                             <IdBox>{userId}</IdBox>
                         </UserBox>
                         <ContentBox>

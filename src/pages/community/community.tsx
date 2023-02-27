@@ -62,6 +62,7 @@ export default function Community() {
                     <DetailButton
                         to={`/Community/${info.id}`}
                         state={{
+                            id: info.id,
                             userId: info.userId,
                             content: info.content,
                             createdAt: info.createdAt,

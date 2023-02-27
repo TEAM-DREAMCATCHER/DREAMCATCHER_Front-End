@@ -12,17 +12,20 @@ export const CategoryList = styled.ul`
     display: flex;
     align-items: center;
     padding: 10px 22px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     &::-webkit-scrollbar {
-        height: 4px;
-        background-color: #000;
+        height: 5px;
     }
-
     &::-webkit-scrollbar-thumb {
-        width: 3px;
-        background: #fff;
+        background: #635273;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        max-width: 10px;
+        background-color: black;
     }
 `
 export const CategoryItem = styled.li<Category>`

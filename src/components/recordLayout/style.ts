@@ -16,18 +16,21 @@ export const StyledLayout = styled.div`
 export const H2 = styled.h2`
     margin-bottom: 10px;
     vertical-align: top;
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 600;
+    ${({ theme }) => theme.fonts.title20};
     line-height: 34px;
 `
 
 export const EmojiContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    ${({ theme }) => theme.layouts.flexCenterColumn};
     align-items: center;
     margin-top: 27px;
+    cursor: pointer;
+`
+
+export const EmojiButton = styled.div`
+    width: 50px;
+    height: 50px;
+    ${({ theme }) => theme.layouts.flexCenter};
 `
 
 export const SEmoji = styled.div`
@@ -36,21 +39,13 @@ export const SEmoji = styled.div`
     top: 310px;
 `
 
-export const DefaultImage = styled.img`
-    width: 50px;
-    filter: invert(78%) sepia(11%) saturate(889%) hue-rotate(226deg) brightness(87%) contrast(84%);
-`
-
-export const EmojiButton = styled.button`
-    cursor: pointer;
-`
-
 export const EmojiDescription = styled.div`
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 13px;
-    color: #b9a1cf;
     margin-top: 18px;
+    ${({ theme }) => theme.fonts.text13};
+    background: ${({ theme }) => theme.colors.linear.purple};
+    font-weight: bolder;
+    color: transparent;
+    -webkit-background-clip: text;
 `
 
 export const DescriptionTextArea = styled.textarea`
@@ -60,15 +55,12 @@ export const DescriptionTextArea = styled.textarea`
     margin-top: 24px;
     border-radius: 10px;
     resize: none;
-    background-color: #1d1a23;
-    color: white;
-    font-size: 16px;
-    font-family: 'Pretendard';
+    background-color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.white};
+    ${({ theme }) => theme.fonts.text14};
 
     &::placeholder {
-        font-family: 'Pretendard';
-        font-weight: 500;
-        font-size: 14px;
+        ${({ theme }) => theme.fonts.text14};
         line-height: 20px;
     }
 `

@@ -17,6 +17,8 @@ import Dream from '@/components/home/Dream'
 import AlertIcon from '@/components/common/icons/AlertIcon'
 import MenuIcon from '@/components/common/icons/MenuIcon'
 import yetDeveloped from '@/utils/yetDeveloped'
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
     const navigate = useNavigate()

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PostingItem = styled.li`
-    width: 390px;
+    max-width: 390px;
     height: 154px;
     margin: 16px auto;
     padding: 20px;
@@ -25,8 +25,6 @@ export const IdParagraph = styled.p`
     color: #eeeff3;
 `
 export const ProfileEmoji = styled.div`
-    width: 30px;
-    height: 30px;
     margin-left: auto;
 `
 export const HeaderBox = styled.div`

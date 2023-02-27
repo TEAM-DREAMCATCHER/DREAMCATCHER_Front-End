@@ -13,19 +13,19 @@ import ListView from '@/pages/home/ListView'
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/onboarding',
         element: <Onboarding />,
         errorElement: <ErrorPage />,
     },
     {
-        path: '/landing',
+        path: '/',
         element: <Landing />,
         errorElement: <ErrorPage />,
     },
     {
         path: '/home',
-        errorElement: <ErrorPage />,
         element: <Home />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/signup',

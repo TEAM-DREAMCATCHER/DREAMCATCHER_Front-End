@@ -1,5 +1,6 @@
 import BackIcon from '@/components/common/icons/BackIcon'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
+import { Emoji } from 'emoji-picker-react'
 import { useLocation } from 'react-router-dom'
 import {
     BackButton,
@@ -27,13 +28,13 @@ export default function Detail() {
     const loginUser = 'user'
 
     const location = useLocation()
-    const { id, userId, content, createdAt, likeCount, pri } = location.state
+    const { id, userId, content, createdAt, likeCount, pri, emoji } = location.state
     const shareHandler = () => {
         if (navigator.share) {
             navigator.share({
                 title: '기록해드림의 꿈기록',
                 text: 'content',
-                url: `http://localhost:5173/Community/${id}`,
+                url: `/community/${id}`,
             })
         } else {
             alert('공유하기가 지원되지 않는 환경입니다.')
@@ -62,7 +63,9 @@ export default function Detail() {
                             <ShareButton onClick={() => shareHandler()}>📢</ShareButton>
                         </div>
                     </HeaderBox>
-                    <EmojiBox>{/* <Emoji unified={.emoji} size={50} /> */}😁</EmojiBox>
+                    <EmojiBox>
+                        <Emoji unified={emoji} size={50} />
+                    </EmojiBox>
                     <PostingBox>
                         <UserBox>
                             <UserInfoBox>

@@ -6,14 +6,11 @@ import CheckIcon from '../../../../public/assets/icon/btn_check_active.png'
 export const Footer = styled.footer`
     min-height: 55px;
     padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    ${({ theme }) => theme.layouts.flexBetween};
 `
 
 export const Date = styled.div`
-    display: flex;
-    align-items: center;
+    ${({ theme }) => theme.layouts.flexCenter};
     max-width: 50%;
 
     label {
@@ -30,21 +27,16 @@ export const SDatePicker = styled(DatePicker)`
     background-color: transparent;
     color: inherit;
     vertical-align: top;
-    font-family: 'Pretendard';
-    font-weight: 700;
-    font-size: 12px;
+    ${({ theme }) => theme.fonts.text12};
     cursor: pointer;
 `
 
 export const Checkbox = styled.div`
     min-width: 115px;
-    display: flex;
-    align-items: center;
+    ${({ theme }) => theme.layouts.flexCenter};
 
     label {
-        font-family: 'Pretendard';
-        font-weight: 700;
-        font-size: 12px;
+        ${({ theme }) => theme.fonts.text12};
         cursor: pointer;
     }
 
@@ -53,8 +45,8 @@ export const Checkbox = styled.div`
         width: 15px;
         height: 15px;
         margin-left: 6px;
-        background-color: rgba(238, 239, 243, 0.95);
-        box-shadow: 0 0 5px 0.5px rgba(238, 239, 243, 0.95);
+        background-color: ${({ theme }) => theme.colors.white};
+        box-shadow: 0 0 5px 0.5px ${({ theme }) => theme.colors.white};
         border-radius: 3px;
         cursor: pointer;
     }

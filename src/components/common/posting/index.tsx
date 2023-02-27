@@ -29,6 +29,21 @@ export default function Posting({
     createdAt,
 }: PostingProps): React.ReactElement {
     const loginUser = 'user'
+    const [date, time] = [createdAt.slice(0, 10), createdAt.slice(11)]
+    const [year, month, day] = date.split('-').map(Number)
+    const [hour, min, seconds] = time.split(':').map(Number)
+    const nowTime = new Date()
+    const [nowYear, nowMonth, nowDay, nowHour, nowMin, nowSeconds] = [
+        nowTime.getFullYear(),
+        nowTime.getMonth(),
+        nowTime.getDate(),
+        nowTime.getHours(),
+        nowTime.getHours(),
+        nowTime.getMinutes(),
+    ]
+
+    if (year === nowYear && month === nowMonth && day === nowDay) {
+    }
 
     const convertLikeCountToK = (count: number) => {
         const thousand = 1000

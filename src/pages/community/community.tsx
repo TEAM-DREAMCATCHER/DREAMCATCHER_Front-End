@@ -21,7 +21,7 @@ export default function Community() {
             id: '4',
             userId: 'user',
             content: 'dream dream',
-            createdAt: '2023-02-27',
+            createdAt: '2023-02-27 15:23:33',
             updatedAt: '2023-02-26',
             likeCount: 0,
             category: 'joy',

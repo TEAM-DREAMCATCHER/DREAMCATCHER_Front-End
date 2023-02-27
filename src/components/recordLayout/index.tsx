@@ -4,7 +4,6 @@ import EmojiPicker, { Emoji } from 'emoji-picker-react'
 import {
     H2,
     EmojiDescription,
-    DefaultImage,
     EmojiButton,
     StyledLayout,
     EmojiContainer,
@@ -13,6 +12,7 @@ import {
 } from './style'
 import { EmojiClickData } from 'emoji-picker-react/dist/types/exposedTypes'
 import Category from './category'
+import AddButton from '../common/AddButton'
 
 const options = [
     '웃겨요',
@@ -51,12 +51,12 @@ function RecordLayout() {
                     <br />
                     안온한 밤 되셨나요?
                 </H2>
-                <EmojiContainer>
-                    <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
+                <EmojiContainer onClick={() => setShowPicker((prev) => !prev)}>
+                    <EmojiButton>
                         {recordState.emoji ? (
                             <Emoji unified={recordState.emoji} size={50} />
                         ) : (
-                            <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
+                            <AddButton shape="dot" size="md" />
                         )}
                     </EmojiButton>
                     <EmojiDescription>떠오르는 잔상을 이모지로 표현해보세요</EmojiDescription>

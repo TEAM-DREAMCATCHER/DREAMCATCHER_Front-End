@@ -16,37 +16,37 @@ const router = createBrowserRouter([
     {
         path: '/onboarding',
         element: <Onboarding />,
-        errorElement: <Onboarding />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/',
         element: <Landing />,
-        errorElement: <Landing />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/home',
+        element: <Home />,
         errorElement: <ErrorPage />,
-        element: <ErrorPage />,
     },
     {
         path: '/signup',
         element: <SignUp />,
-        errorElement: <SignUp />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/signin',
         element: <Signin />,
-        errorElement: <Signin />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/welcome',
         element: <Welcome />,
-        errorElement: <Welcome />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/recording',
         element: <Recording />,
-        errorElement: <Recording />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/community',
@@ -56,17 +56,17 @@ const router = createBrowserRouter([
     {
         path: '/community/:id',
         element: <Detail />,
-        errorElement: <Detail />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/test',
         element: <Test />,
-        errorElement: <Test />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/list',
         element: <ListView />,
-        errorElement: <ListView />,
+        errorElement: <ErrorPage />,
     },
 ])
 

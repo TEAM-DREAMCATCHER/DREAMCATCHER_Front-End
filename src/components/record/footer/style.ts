@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import CheckIcon from '../../../../public/assets/icon/btn_check_active.png'
 
 export const Footer = styled.footer`
     min-height: 55px;
@@ -8,13 +9,12 @@ export const Footer = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 700px;
 `
 
 export const Date = styled.div`
     display: flex;
     align-items: center;
+    max-width: 50%;
 
     label {
         width: 24px;
@@ -37,6 +37,7 @@ export const SDatePicker = styled(DatePicker)`
 `
 
 export const Checkbox = styled.div`
+    min-width: 115px;
     display: flex;
     align-items: center;
 
@@ -56,5 +57,9 @@ export const Checkbox = styled.div`
         box-shadow: 0 0 5px 0.5px rgba(238, 239, 243, 0.95);
         border-radius: 3px;
         cursor: pointer;
+    }
+
+    input:checked {
+        background: center / 15px 15px no-repeat url(${CheckIcon});
     }
 `

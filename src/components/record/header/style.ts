@@ -2,9 +2,7 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
     min-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    ${({ theme }) => theme.layouts.flexBetween};
 `
 export const CloseButton = styled.button.attrs({
     alt: '창 닫기',

@@ -3,6 +3,8 @@ import Category from '@/components/common/category'
 import SortOption from '@/components/common/sortOption'
 import Posting from '@/components/common/posting'
 import { useState } from 'react'
+import Header from '@/components/common/header'
+import Navbar from '@/components/common/navbar'
 
 export interface Info {
     id: string
@@ -12,7 +14,7 @@ export interface Info {
     updatedAt: string
     likeCount: number
     category: string
-    pri: boolean
+    pri: boolean // TODO: pub로 수정이 필요할것 같아요!
     emoji: string
 }
 
@@ -35,7 +37,7 @@ export default function Community() {
             id: '2',
             userId: '펄스',
             content: 'dream dream dream dream dream dream dream dream dream dream dream dream',
-            createdAt: '2023-02-26',
+            createdAt: '2023-02-27 15:23:33',
             updatedAt: '2023-02-26',
             likeCount: 10,
             category: 'joy',
@@ -47,7 +49,7 @@ export default function Community() {
             userId: '조이',
             content:
                 'dream dream dream dream dream dream dream dream dream dream dream dream dream dream',
-            createdAt: '2023-02-26',
+            createdAt: '2023-02-27 14:23:33',
             updatedAt: '2023-02-26',
             likeCount: 20,
             category: 'joy',
@@ -59,7 +61,7 @@ export default function Community() {
             userId: '조이',
             content:
                 'dream dream dream dream dream dream dream dream dream dream dream dream dream dream',
-            createdAt: '2023-02-26',
+            createdAt: '2023-02-27 14:23:33',
             updatedAt: '2023-02-26',
             likeCount: 20,
             category: 'joy',
@@ -135,6 +137,7 @@ export default function Community() {
     return (
         <>
             <Layout>
+                <Header />
                 <Category />
                 <SortOption />
                 {mock.map((info, idx) => {
@@ -171,6 +174,7 @@ export default function Community() {
                         ''
                     )}
                 </MoreBox>
+                <Navbar />
             </Layout>
         </>
     )

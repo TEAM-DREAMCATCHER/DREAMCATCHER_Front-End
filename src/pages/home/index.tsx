@@ -1,37 +1,75 @@
-import { getCurrentDreamsAPI, getMyDreamsAPI } from '@/apis/home'
+import { useNavigate } from 'react-router-dom'
+import Calendar from '@/components/home/calendar'
+import {
+    HomeLayout,
+    Title,
+    TitleBox,
+    ListButton,
+    DreamContent,
+    DreamContainer,
+    AddButtonBox,
+    Header,
+} from '@/pages/home/styles'
+import Navbar from '@/components/common/navbar'
+import AddButton from '@/components/common/AddButton'
+import ForwardIcon from '@/components/common/icons/ForwardIcon'
+import Dream from '@/components/home/Dream'
 import AlertIcon from '@/components/common/icons/AlertIcon'
 import MenuIcon from '@/components/common/icons/MenuIcon'
-import Calendar from '@/components/home/calendar'
-import { Header, HomeLayout } from '@/pages/home/styles'
 import yetDeveloped from '@/utils/yetDeveloped'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function Home() {
-    // useEffect(() => {
-    //     // getCurrentDreamsAPI()
-    //     getMyDreamsAPI()
-    // }, [])
+    const navigate = useNavigate()
 
     return (
-        <HomeLayout>
-            <Header>
-                {/* TODO: 임시 community ,recording연결 */}
-                {/* <span onClick={yetDeveloped}> */}
-                <Link to="/recording">
-                    <AlertIcon />
-                </Link>
-                {/* </span> */}
-                {/* <span onClick={yetDeveloped}> */}
-                <Link to="/community">
-                    <MenuIcon />
-                </Link>
-                {/* </span> */}
-            </Header>
-            <main>
-                <Calendar />
-            </main>
-        </HomeLayout>
+        <>
+            <HomeLayout>
+                <Header>
+                    <span onClick={yetDeveloped}>
+                        <AlertIcon />
+                    </span>
+                    <span onClick={yetDeveloped}>
+                        <MenuIcon />
+                    </span>
+                </Header>
+                <main>
+                    <Calendar />
+                    <DreamContainer>
+                        <TitleBox>
+                            <Title>나의 꿈 Top 3</Title>
+                            <ListButton onClick={() => navigate('/list')}>
+                                <span>전체보기</span>
+                                <ForwardIcon />
+                            </ListButton>
+                        </TitleBox>
+                        <div>
+                            <ul>
+                                <DreamContent>
+                                    <Dream />
+                                </DreamContent>
+
+                                <DreamContent>
+                                    <Dream />
+                                </DreamContent>
+
+                                <DreamContent>
+                                    <Dream />
+                                </DreamContent>
+                            </ul>
+                        </div>
+                    </DreamContainer>
+                </main>
+
+                {/* NOTE: NAV랑 이게 나눠져 있는게 맞을까요..? */}
+                <AddButtonBox>
+                    <AddButton onClick={() => navigate('/recording')} />
+                </AddButtonBox>
+
+                <Navbar />
+            </HomeLayout>
+        </>
     )
 }
 

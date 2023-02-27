@@ -1,9 +1,8 @@
-import { SortOptionLayout, SortOptionList, SortOptionSpan, SortOptionItem } from './style'
+import { SortOptionLayout, SortOptionList, SortOptionItem } from './style'
 import { useState } from 'react'
 
 export default function SortOption() {
-
-    const [btnActive, setBtnActive] = useState(0);
+    const [optionActive, setOptionActive] = useState(0);
 
     const sortOptionList = [
         {
@@ -23,19 +22,16 @@ export default function SortOption() {
                     {
                         sortOptionList.map((item, index) => {
                             return (
-                                <>
-                                    <SortOptionItem
-                                        key={item.id}
-                                        idx={index}
-                                        active={btnActive}
-                                        onClick={() => {
-                                            setBtnActive(index)
-                                        }}
-                                    >
-                                        {item.option}
-                                    </SortOptionItem>
-                                    <SortOptionSpan></SortOptionSpan>
-                                </>
+                                <SortOptionItem
+                                    key={item.id}
+                                    idx={index}
+                                    active={optionActive}
+                                    onClick={() => {
+                                        setOptionActive(index)
+                                    }}
+                                >
+                                    {item.option}
+                                </SortOptionItem>
                             )
                         })
                     }

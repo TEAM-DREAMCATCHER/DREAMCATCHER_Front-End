@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FowardIcon = () => {
+const ForwardIcon = () => {
     return (
         <svg
             width="24"
@@ -17,4 +17,4 @@ const FowardIcon = () => {
     )
 }
 
-export default FowardIcon
+export default ForwardIcon

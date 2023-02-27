@@ -1,38 +1,24 @@
+import { AuthButtonStyled } from '@/components/common/styles/button'
+import { Layout } from '@/components/common/styles/layout'
 import styled from 'styled-components'
 
-export const Layout = styled.div`
-    width: 100%;
-    max-width: 430px;
-    margin: auto;
-    min-height: 100vh;
-    background: #12121b;
-    color: #ffffff;
-`
-
 export const WelcomeLayout = styled(Layout)`
+    ${({ theme }) => theme.layouts.flexBetweenColumn};
+
     padding: 85px 20px 51px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     text-align: center;
 `
 
 export const Heading = styled.h1`
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
-
-    color: #ffffff;
+    ${({ theme }) => theme.fonts.title26};
 `
 
-export const Button = styled.button`
-    width: 100%;
-    height: 58px;
+export const Desc = styled.p`
+    ${({ theme }) => theme.fonts.title16};
+    color: ${({ theme }) => theme.colors.gray1};
 
-    background: linear-gradient(126.87deg, #b9a1cf 16.19%, #635273 83.65%);
-    border-radius: 29px;
-
-    font-weight: 600;
-    font-size: 18px;
-    color: #000000;
+    margin: 25px 0 130px;
+    line-height: 19px;
 `
+
+export const Button = styled(AuthButtonStyled)``

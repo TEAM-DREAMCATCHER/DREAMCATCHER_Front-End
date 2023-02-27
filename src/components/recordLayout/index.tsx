@@ -2,26 +2,27 @@ import React, { ChangeEvent, useState } from 'react'
 import { RecordState } from './types'
 import EmojiPicker, { Emoji } from 'emoji-picker-react'
 import {
-    EmojiHeader,
+    H2,
     EmojiDescription,
     DefaultImage,
     EmojiButton,
     StyledLayout,
     EmojiContainer,
-    DescriptionHeader,
-    DescriptionContainer,
     DescriptionTextArea,
+    SEmoji,
 } from './style'
 import { EmojiClickData } from 'emoji-picker-react/dist/types/exposedTypes'
-import { Select } from './Select'
-import { SelectOption } from './Select/types'
+import Category from './category'
 
 const options = [
-    { label: '모르겠어요', value: '모르겠어요' },
-    { label: '웃겨요', value: '웃겨요' },
-    { label: '행복해요', value: '행복해요' },
-    { label: '멋져요', value: '멋져요' },
-    { label: '슬퍼요', value: '슬퍼요' },
+    '웃겨요',
+    '행복해요',
+    '멋져요',
+    '슬퍼요',
+    '신기해요',
+    '무서워요',
+    '모르겠어요',
+    '환상적이에요',
 ]
 
 function RecordLayout() {
@@ -29,8 +30,9 @@ function RecordLayout() {
         emoji: '',
         content: '',
     })
-    const [category, setCategory] = useState<SelectOption | undefined>(options[0])
+    console.log(recordState)
     const [showPicker, setShowPicker] = useState<boolean>(false)
+    const [category, setCategory] = useState<string>('')
 
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
         setRecordState((prev) => ({ ...prev, content: event.target.value }))
@@ -43,28 +45,37 @@ function RecordLayout() {
 
     return (
         <StyledLayout>
-            <EmojiHeader>OO 님,</EmojiHeader>
-            <EmojiHeader>안온한 밤 되셨나요?</EmojiHeader>
-            <EmojiContainer>
-                <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
-                    {recordState.emoji ? (
-                        <Emoji unified={recordState.emoji} size={50} />
-                    ) : (
-                        <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
+            <section>
+                <H2>
+                    OO 님,
+                    <br />
+                    안온한 밤 되셨나요?
+                </H2>
+                <EmojiContainer>
+                    <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
+                        {recordState.emoji ? (
+                            <Emoji unified={recordState.emoji} size={50} />
+                        ) : (
+                            <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
+                        )}
+                    </EmojiButton>
+                    <EmojiDescription>떠오르는 잔상을 이모지로 표현해보세요</EmojiDescription>
+                    {showPicker && (
+                        <SEmoji>
+                            <EmojiPicker onEmojiClick={handleEmojiClick} />
+                        </SEmoji>
                     )}
-                </EmojiButton>
-                <EmojiDescription>떠오르는 잔상을 이모지로 표현해보세요</EmojiDescription>
-                {showPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
-            </EmojiContainer>
-            <DescriptionHeader>어떤 감정을 느끼셨나요?</DescriptionHeader>
-            <DescriptionContainer>
-                <Select options={options} value={category} onChange={(o) => setCategory(o)} />
+                </EmojiContainer>
+            </section>
+            <section>
+                <H2>어떤 감정을 느끼셨나요?</H2>
+                <Category options={options} category={category} setCategory={setCategory} />
                 <DescriptionTextArea
                     placeholder="자세한 이야기를 듣고 싶어요! (최대 600자)"
                     onChange={handleChange}
                     maxLength={600}
                 ></DescriptionTextArea>
-            </DescriptionContainer>
+            </section>
         </StyledLayout>
     )
 }

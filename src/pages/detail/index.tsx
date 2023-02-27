@@ -1,5 +1,7 @@
-import { useState } from 'react'
-import ProfileImage from './Profile'
+import BackIcon from '@/components/common/icons/BackIcon'
+import ProfileIcon from '@/components/common/icons/ProfileIcon'
+import { Emoji } from 'emoji-picker-react'
+import { useLocation } from 'react-router-dom'
 import {
     BackButton,
     ContentBox,
@@ -9,50 +11,96 @@ import {
     HeaderBox,
     IdBox,
     ImgBox,
+    Layout,
     LikeBox,
+    LikeButton,
+    ManageBox,
+    ManageButton,
     PostingBox,
     PostingSection,
+    ShareButton,
     TimeBox,
     UserBox,
-} from './style'
+    UserInfoBox,
+} from './styles'
 
 export default function Detail() {
-    // 추후 데이터 props 전달받아 작성해야함
-    const nickName = '닉네임'
-    const [content, setContent] = useState(
-        '이 글은 다른 사람의 꿈기록입니다!!!!!내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용'
-    )
-    const [like, setLike] = useState('1.0k')
-    const [time, setTime] = useState('6시간 전')
+    const loginUser = 'user'
+
+    const location = useLocation()
+    const { id, userId, content, createdAt, likeCount, pri, emoji } = location.state
+    const shareHandler = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: '기록해드림의 꿈기록',
+                text: 'content',
+                url: `http://localhost:5173/Community/${id}`,
+            })
+        } else {
+            alert('공유하기가 지원되지 않는 환경입니다.')
+        }
+    }
+
+    const modifyHandler = () => {
+        alert('준비중입니다.')
+    }
+
+    const deleteHandler = () => {
+        alert('준비중입니다.')
+    }
 
     return (
         <>
-            <PostingSection>
-                <HeaderBox>
-                    <div>
-                        <BackButton> &lt; </BackButton>
-                    </div>
-                    <div>📢</div>
-                </HeaderBox>
-                <EmojiBox>{/* <Emoji unified={.emoji} size={50} /> */}😁</EmojiBox>
-                <PostingBox>
-                    <UserBox>
-                        <ImgBox>{<ProfileImage />}</ImgBox>
-                        <IdBox>{nickName}</IdBox>
-                    </UserBox>
-                    <ContentBox>
-                        <ContentParagraph>{content}</ContentParagraph>
-                    </ContentBox>
-                    <FooterBox>
-                        <LikeBox>
-                            ❤️ <label>{like}</label>
-                        </LikeBox>
-                        <TimeBox>
-                            <p>{time}</p>
-                        </TimeBox>
-                    </FooterBox>
-                </PostingBox>
-            </PostingSection>
+            <Layout>
+                <PostingSection>
+                    <HeaderBox>
+                        <div>
+                            <BackButton to="/community">
+                                <BackIcon />
+                            </BackButton>
+                        </div>
+                        <div>
+                            <ShareButton onClick={() => shareHandler()}>📢</ShareButton>
+                        </div>
+                    </HeaderBox>
+                    <EmojiBox>
+                        <Emoji unified={emoji} size={50} />
+                    </EmojiBox>
+                    <PostingBox>
+                        <UserBox>
+                            <UserInfoBox>
+                                <ImgBox>{<ProfileIcon />}</ImgBox>
+                                <IdBox>{userId}</IdBox>
+                            </UserInfoBox>
+                            {userId === loginUser ? (
+                                <ManageBox>
+                                    <ManageButton onClick={() => modifyHandler()}>
+                                        수정
+                                    </ManageButton>
+                                    <ManageButton onClick={() => deleteHandler()}>
+                                        삭제
+                                    </ManageButton>
+                                </ManageBox>
+                            ) : (
+                                ''
+                            )}
+                        </UserBox>
+
+                        <ContentBox>
+                            <ContentParagraph>{content}</ContentParagraph>
+                        </ContentBox>
+                        <FooterBox>
+                            <LikeBox>
+                                <LikeButton>❤️</LikeButton>
+                                <label>{likeCount}</label>
+                            </LikeBox>
+                            <TimeBox>
+                                <p>{createdAt}</p>
+                            </TimeBox>
+                        </FooterBox>
+                    </PostingBox>
+                </PostingSection>
+            </Layout>
         </>
     )
 }

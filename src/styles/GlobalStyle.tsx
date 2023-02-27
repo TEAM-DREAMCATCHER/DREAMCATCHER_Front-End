@@ -5,15 +5,17 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
    * {
     box-sizing: border-box;
+    font-family:  Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+
   }
   html, body {
     width:100%;
     height:100%;
-    color: white;
+    font-family:  Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   }
+  
   a {
     text-decoration:none;
-    color: #767676;
   }
   button{
     border: none;

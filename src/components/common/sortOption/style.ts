@@ -7,7 +7,7 @@ interface SortOption {
 }
 
 export const SortOptionLayout = styled.div`
-    margin: 12px 0 29px;
+    margin-top: 12px;
 `
 export const SortOptionList = styled.ul`
     display: flex;
@@ -20,36 +20,53 @@ export const SortOptionList = styled.ul`
     background: #1d1a23;
     border-radius: 20px;
 `
-export const SortOptionSpan = styled.span`
-    width: 1.5px;
-    height: 10px;
-    margin: 0 6px;
-    background: #0b0711;
-`
 export const SortOptionItem = styled.li<SortOption>`
     display: flex;
     align-items: center;
     font-size: 11px;
     font-weight: 600;
     cursor: pointer;
-    background: #a3a3a3;
     background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);
     -webkit-background-clip: text;
     color: transparent;
 
     &:first-child::after {
-        content: "";
+        content: '';
+        width: 1.5px;
+        height: 10px;
+        margin: 0 6px;
+        background: #0b0711;
+    }
+
+    &::before {
+        content: '';
         display: block;
         width: 4px;
         height: 4px;
         margin-right: 4px;
-        color: #0b0711;
         border-radius: 50%;
-        background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);
     }
 
-    ${(props) =>
-        props.idx == props.active
-            ? ' & span background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);'
-            : ' & span color: #fff;'};
+    ${(props) => {
+        return props.idx == props.active
+            ? `
+                &::before {
+                    color: #fff;
+                    background: #fff;
+                }
+                
+                color: #fff;
+                
+            `
+            : `
+                background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%); 
+                color: transparent; 
+                -webkit-background-clip: text; 
+                
+                &::before {
+                    color: #0b0711;
+                    background: linear-gradient(to bottom, #a3a3a3 0%, #3f3f3f 100%);
+                }
+            `
+    }}
 `

@@ -1,4 +1,4 @@
-import request from '@/apis'
+import lambdaRequest from '@/apis/lambda'
 
 const DUMMY_EMOJI: EmojiType[] = [
     {
@@ -39,22 +39,27 @@ const DUMMY_EMOJI: EmojiType[] = [
     },
 ]
 
-const MY_POSTS_URL = import.meta.env.VITE_PUBLIC_MY_POSTS_URL
-
 export interface EmojiType {
     id: number
     emoji: string
 }
 
 export const getPostEmojisAPI = async (year: number, month: number): Promise<EmojiType[]> => {
-    // TODO : DUMMY_EMOJI 대신 API 호출
-    return DUMMY_EMOJI
+    const response = await lambdaRequest.get('/myDreams')
+    // TODO : return type 정의
+    const emojiData = response.data.map(({ postId, emoji }) => ({ id: postId, emoji: emoji }))
+    return emojiData
 }
 
 export const getTest = async () => {
-    // NOTE: test 중
-    // const response = await request.get(
-    //     'https://hgsz3wlmc8.execute-api.ap-northeast-2.amazonaws.com/default/myDreams'
-    // )
-    // console.log('response: ', response)
+    const response = await lambdaRequest.get('/myDreams')
+    console.log('response: ', response.data)
+
+    return response.data
+}
+
+export const getMyDreamsAPI = async () => {
+    const response = await lambdaRequest.get('/myDreams')
+
+    return response.data
 }

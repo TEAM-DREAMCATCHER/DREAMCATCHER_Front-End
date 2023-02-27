@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 export const HomeLayout = styled(Layout)`
     padding: 0 20px 80px;
+    display: flex;
+    flex-direction: column;
 `
 
 export const Header = styled.header`

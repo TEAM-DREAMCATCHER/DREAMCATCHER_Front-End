@@ -35,7 +35,7 @@ export default function Community() {
             id: '2',
             userId: '펄스',
             content: 'dream dream dream dream dream dream dream dream dream dream dream dream',
-            createdAt: '2023-02-26',
+            createdAt: '2023-02-27 15:23:33',
             updatedAt: '2023-02-26',
             likeCount: 10,
             category: 'joy',
@@ -47,7 +47,7 @@ export default function Community() {
             userId: '조이',
             content:
                 'dream dream dream dream dream dream dream dream dream dream dream dream dream dream',
-            createdAt: '2023-02-26',
+            createdAt: '2023-02-27 14:23:33',
             updatedAt: '2023-02-26',
             likeCount: 20,
             category: 'joy',
@@ -59,7 +59,7 @@ export default function Community() {
             userId: '조이',
             content:
                 'dream dream dream dream dream dream dream dream dream dream dream dream dream dream',
-            createdAt: '2023-02-26',
+            createdAt: '2023-02-27 14:23:33',
             updatedAt: '2023-02-26',
             likeCount: 20,
             category: 'joy',

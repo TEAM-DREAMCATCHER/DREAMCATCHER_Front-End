@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export const LandingLayout = styled(Layout)`
     ${({ theme }) => theme.layouts.flexCenterColumn}
+    align-items: center;
 `
 
 export const LogoBox = styled.div`
@@ -31,7 +32,7 @@ export const Heading = styled.h1`
     @keyframes animation {
         from {
             opacity: 0.8;
-            transform: translateY(-10px);
+            transform: translateY(10px);
         }
 
         to {

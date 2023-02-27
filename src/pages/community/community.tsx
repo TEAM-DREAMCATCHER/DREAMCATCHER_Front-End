@@ -4,6 +4,7 @@ import SortOption from '@/components/common/sortOption'
 import Posting from '@/components/common/posting'
 import { useState } from 'react'
 import Header from '@/components/common/header'
+import Navbar from '@/components/common/navbar'
 
 export interface Info {
     id: string
@@ -173,6 +174,7 @@ export default function Community() {
                         ''
                     )}
                 </MoreBox>
+                <Navbar />
             </Layout>
         </>
     )

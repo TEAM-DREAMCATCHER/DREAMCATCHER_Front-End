@@ -36,7 +36,7 @@ export const EmptyBox = styled.div`
     background: ${({ theme }) => theme.colors.linear.purple};
     align-items: center;
     text-align: center;
-    margin: 54px auto 0;
+    margin: 14px auto 0;
     gap: 6px;
     line-height: 20px;
 

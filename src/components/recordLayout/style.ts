@@ -28,21 +28,21 @@ export const EmojiContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 27px;
+    cursor: pointer;
+`
+
+export const EmojiButton = styled.div`
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const SEmoji = styled.div`
     position: fixed;
     z-index: 10;
     top: 310px;
-`
-
-export const DefaultImage = styled.img`
-    width: 50px;
-    filter: invert(78%) sepia(11%) saturate(889%) hue-rotate(226deg) brightness(87%) contrast(84%);
-`
-
-export const EmojiButton = styled.button`
-    cursor: pointer;
 `
 
 export const EmojiDescription = styled.div`

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react'
 import { RecordState } from './types'
-import EmojiPicker, { Emoji } from 'emoji-picker-react'
+import EmojiPicker from 'emoji-picker-react'
 import {
     H2,
     EmojiDescription,
@@ -9,12 +9,12 @@ import {
     StyledLayout,
     EmojiContainer,
     DescriptionTextArea,
+    SEmoji,
 } from './style'
 import { EmojiClickData } from 'emoji-picker-react/dist/types/exposedTypes'
 import Category from './category'
 
 const options = [
-    '전체',
     '웃겨요',
     '행복해요',
     '멋져요',
@@ -53,7 +53,7 @@ function RecordLayout() {
                 <EmojiContainer>
                     <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
                         {recordState.emoji ? (
-                            <Emoji unified={recordState.emoji} size={50} />
+                            <SEmoji unified={recordState.emoji} size={50} />
                         ) : (
                             <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
                         )}

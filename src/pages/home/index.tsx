@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-
 import Calendar from '@/components/home/calendar'
 import {
     HomeLayout,
@@ -60,6 +59,8 @@ function Home() {
                         </div>
                     </DreamContainer>
                 </main>
+
+                {/* NOTE: NAV랑 이게 나눠져 있는게 맞을까요..? */}
                 <AddButtonBox>
                     <AddButton onClick={() => navigate('/recording')} />
                 </AddButtonBox>

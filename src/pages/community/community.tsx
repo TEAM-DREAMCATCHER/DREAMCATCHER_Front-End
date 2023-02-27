@@ -76,6 +76,7 @@ export default function Community() {
                         <Posting {...info} nickName={info.id} />
                     </DetailButton>
                 ))}
+
                 <Navbar />
             </Layout>
         </>

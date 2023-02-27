@@ -9,27 +9,29 @@ const HomeLayout = styled(Layout)`
     display: flex;
     flex-direction: column;
 
-    padding: 0 20px 80px;
+    padding: 0 20px 60px;
 `
 
 const Header = styled.header`
+    ${({ theme }) => theme.layouts.flexBetween}
+
     height: 70px;
     gap: 12px;
-
-    ${({ theme }) => theme.layouts.flexBetween}
 `
 
 const Title = styled.h3`
+    color: ${(props) => props.theme.colors.gray2};
+
     margin-bottom: 31px;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    color: ${(props) => props.theme.colors.gray2};
 `
 
 const PostList = styled.ul`
-    height: 100vh;
-    overflow-y: scroll;
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: auto;
 `
 
 const AddButtonContainer = styled.div`

@@ -64,9 +64,7 @@ function Home() {
                     <AddButton onClick={() => navigate('/recording')} />
                 </AddButtonBox>
 
-                <div>
-                    <Navbar />
-                </div>
+                <Navbar />
             </HomeLayout>
         </>
     )

@@ -13,12 +13,16 @@ export const CalendarLayout = styled.div`
     margin-top: 34px;
 
     &::-webkit-scrollbar {
-        width: 2px;
+        width: 5px;
+        &:horizontal {
+            height: 5px;
+        }
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: ${({ theme }) => theme.colors.gray0};
         border-radius: 10px;
+        height: 50%;
     }
 
     &::-webkit-scrollbar-track {
@@ -30,7 +34,7 @@ export const EmptyBox = styled.div`
     ${({ theme }) => theme.layouts.flexCenterColumn}
     ${({ theme }) => theme.fonts.text13}
     background: ${({ theme }) => theme.colors.linear.purple};
-
+    align-items: center;
     text-align: center;
     margin: 54px auto 0;
     gap: 6px;

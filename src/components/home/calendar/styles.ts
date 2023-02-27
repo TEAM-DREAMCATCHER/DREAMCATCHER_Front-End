@@ -13,12 +13,16 @@ export const CalendarLayout = styled.div`
     margin-top: 34px;
 
     &::-webkit-scrollbar {
-        width: 2px;
+        width: 5px;
+        &:horizontal {
+            height: 5px;
+        }
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: ${({ theme }) => theme.colors.gray0};
         border-radius: 10px;
+        height: 50%;
     }
 
     &::-webkit-scrollbar-track {

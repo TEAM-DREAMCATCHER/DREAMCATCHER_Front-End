@@ -38,7 +38,7 @@ const DreamContainer = styled.div`
     margin-top: 45px;
 `
 
-const DreamCotent = styled.li`
+const DreamContent = styled.li`
     margin-top: 16px;
 `
 
@@ -56,6 +56,6 @@ export {
     Title,
     ListButton,
     DreamContainer,
-    DreamCotent,
+    DreamContent,
     AddButtonBox,
 }

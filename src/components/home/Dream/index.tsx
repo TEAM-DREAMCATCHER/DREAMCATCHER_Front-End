@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
 import Like from '@/components/common/Like'
+import { LikeCount } from '@/components/common/posting/style'
+import { Container, Content, StatusBox, PostDate } from '@/components/home/Dream/styles'
+import { LikeBox } from '@/pages/detail/styles'
 
 const Dream = () => {
     return (
@@ -20,45 +21,3 @@ const Dream = () => {
 }
 
 export default Dream
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 390px;
-    height: 108px;
-    padding: 22px;
-    border-radius: 20px;
-    background-color: #1d1a23;
-`
-
-const Content = styled.p`
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-`
-
-const StatusBox = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
-
-const LikeBox = styled.div`
-    display: flex;
-    align-items: center;
-`
-
-const LikeCount = styled.span`
-    margin-left: 20px;
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 13px;
-`
-
-const PostDate = styled.span`
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 13px;
-`

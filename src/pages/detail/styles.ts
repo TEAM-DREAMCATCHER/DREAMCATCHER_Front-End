@@ -92,6 +92,8 @@ export const FooterBox = styled.div`
 
 export const LikeBox = styled.div`
     font-size: 14px;
+    min-width: 100px;
+    display: flex;
 `
 
 export const LikeButton = styled.button`

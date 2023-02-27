@@ -9,14 +9,14 @@ import {
     Title,
     TitleBox,
     ListButton,
-    DreamCotent,
+    DreamContent,
     DreamContainer,
     AddButtonBox,
 } from '@/pages/home/styles'
 import yetDeveloped from '@/utils/yetDeveloped'
 import Navbar from '@/components/common/navbar'
 import AddButton from '@/components/common/AddButton'
-import FowardIcon from '@/components/common/icons/FowardIcon'
+import ForwardIcon from '@/components/common/icons/ForwardIcon'
 import Dream from '@/components/home/Dream'
 
 function Home() {
@@ -40,22 +40,22 @@ function Home() {
                             <Title>나의 꿈 Top 3</Title>
                             <ListButton onClick={() => navigate('/list')}>
                                 <span>전체보기</span>
-                                <FowardIcon />
+                                <ForwardIcon />
                             </ListButton>
                         </TitleBox>
                         <div>
                             <ul>
-                                <DreamCotent>
+                                <DreamContent>
                                     <Dream />
-                                </DreamCotent>
+                                </DreamContent>
 
-                                <DreamCotent>
+                                <DreamContent>
                                     <Dream />
-                                </DreamCotent>
+                                </DreamContent>
 
-                                <DreamCotent>
+                                <DreamContent>
                                     <Dream />
-                                </DreamCotent>
+                                </DreamContent>
                             </ul>
                         </div>
                     </DreamContainer>

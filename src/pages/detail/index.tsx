@@ -34,7 +34,7 @@ export default function Detail() {
             navigator.share({
                 title: '기록해드림의 꿈기록',
                 text: 'content',
-                url: `http://localhost:5173/Community/${id}`,
+                url: `/community/${id}`,
             })
         } else {
             alert('공유하기가 지원되지 않는 환경입니다.')

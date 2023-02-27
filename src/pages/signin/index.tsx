@@ -23,7 +23,7 @@ function Signin() {
     return (
         <SigninLayout>
             <Header>
-                <Link to="/">
+                <Link to="/onboarding">
                     <BackIcon />
                 </Link>
             </Header>

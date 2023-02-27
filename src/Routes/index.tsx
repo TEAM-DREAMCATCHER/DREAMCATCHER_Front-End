@@ -15,12 +15,12 @@ const router = createBrowserRouter([
     {
         path: '/onboarding',
         element: <Onboarding />,
-        errorElement: <ErrorPage />,
+        errorElement: <Onboarding />,
     },
     {
         path: '/',
         element: <Landing />,
-        errorElement: <ErrorPage />,
+        errorElement: <Landing />,
     },
     {
         path: '/home',
@@ -30,37 +30,37 @@ const router = createBrowserRouter([
     {
         path: '/signup',
         element: <SignUp />,
-        errorElement: <ErrorPage />,
+        errorElement: <SignUp />,
     },
     {
         path: '/signin',
         element: <Signin />,
-        errorElement: <ErrorPage />,
+        errorElement: <Signin />,
     },
     {
         path: '/welcome',
         element: <Welcome />,
-        errorElement: <ErrorPage />,
+        errorElement: <Welcome />,
     },
     {
         path: '/recording',
         element: <Recording />,
-        errorElement: <ErrorPage />,
+        errorElement: <Recording />,
     },
     {
         path: '/community',
         element: <Community />,
-        errorElement: <ErrorPage />,
+        errorElement: <Community />,
     },
     {
         path: '/community/:id',
         element: <Detail />,
-        errorElement: <ErrorPage />,
+        errorElement: <Detail />,
     },
     {
         path: '/list',
         element: <ListView />,
-        errorElement: <ErrorPage />,
+        errorElement: <ListView />,
     },
 ])
 

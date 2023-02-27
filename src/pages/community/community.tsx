@@ -140,7 +140,7 @@ export default function Community() {
                 {mock.map((info, idx) => {
                     return idx < 4 * range ? (
                         <DetailButton
-                            to={`/Community/${info.id}`}
+                            to={`/community/${info.id}`}
                             state={{
                                 id: info.id,
                                 userId: info.userId,

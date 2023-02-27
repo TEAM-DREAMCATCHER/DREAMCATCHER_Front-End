@@ -30,6 +30,7 @@ function RecordLayout() {
         emoji: '',
         content: '',
     })
+    console.log(recordState)
     const [showPicker, setShowPicker] = useState<boolean>(false)
     const [category, setCategory] = useState<string>('')
 

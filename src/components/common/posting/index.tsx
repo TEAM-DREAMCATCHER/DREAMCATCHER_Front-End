@@ -1,6 +1,5 @@
 import LikeIcon from '@/components/common/Like'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
-import { Info } from '@/pages/community/community'
 import {
     ContentParagraph,
     FooterBox,
@@ -12,9 +11,10 @@ import {
     LikeCount,
     TimeParagraph,
 } from './style'
+import { Emoji } from 'emoji-picker-react'
 
 interface PostingProps {
-    nickName: string
+    userId: string
     content: string
     emoji: string
     likeCount: number
@@ -22,13 +22,28 @@ interface PostingProps {
 }
 
 export default function Posting({
-    nickName,
+    userId,
     content,
     emoji,
     likeCount,
     createdAt,
 }: PostingProps): React.ReactElement {
     const loginUser = 'user'
+    const [date, time] = [createdAt.slice(0, 10), createdAt.slice(11)]
+    const [year, month, day] = date.split('-').map(Number)
+    const [hour, min, seconds] = time.split(':').map(Number)
+    const nowTime = new Date()
+    const [nowYear, nowMonth, nowDay, nowHour, nowMin, nowSeconds] = [
+        nowTime.getFullYear(),
+        nowTime.getMonth(),
+        nowTime.getDate(),
+        nowTime.getHours(),
+        nowTime.getHours(),
+        nowTime.getMinutes(),
+    ]
+
+    if (year === nowYear && month === nowMonth && day === nowDay) {
+    }
 
     const convertLikeCountToK = (count: number) => {
         const thousand = 1000
@@ -46,9 +61,11 @@ export default function Posting({
                 <HeaderBox>
                     <ProfileBox>
                         <ProfileIcon />
-                        <IdParagraph>{nickName}</IdParagraph>
+                        <IdParagraph>{userId}</IdParagraph>
                     </ProfileBox>
-                    <ProfileEmoji>{emoji}</ProfileEmoji>
+                    <ProfileEmoji>
+                        <Emoji unified={emoji} size={20} />
+                    </ProfileEmoji>
                 </HeaderBox>
                 <ContentParagraph>{content}</ContentParagraph>
                 <FooterBox>

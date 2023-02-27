@@ -21,12 +21,12 @@ export default function Community() {
             id: '4',
             userId: 'user',
             content: 'dream dream',
-            createdAt: '2023-02-27',
+            createdAt: '2023-02-27 15:23:33',
             updatedAt: '2023-02-26',
             likeCount: 0,
             category: 'joy',
             pri: false,
-            emoji: 'joy',
+            emoji: '1f92d',
         },
         {
             id: '2',
@@ -37,7 +37,7 @@ export default function Community() {
             likeCount: 10,
             category: 'joy',
             pri: false,
-            emoji: 'joy',
+            emoji: '1f603',
         },
         {
             id: '4',
@@ -49,7 +49,7 @@ export default function Community() {
             likeCount: 20,
             category: 'joy',
             pri: false,
-            emoji: 'joy',
+            emoji: '1f601',
         },
     ]
 
@@ -68,9 +68,17 @@ export default function Community() {
                             createdAt: info.createdAt,
                             likeCount: info.likeCount,
                             pri: info.pri,
+                            emoji: info.emoji,
                         }}
                     >
-                        <Posting props={info} />
+                        <Posting
+                            key={info.userId}
+                            content={info.content}
+                            userId={info.userId}
+                            emoji={info.emoji}
+                            likeCount={info.likeCount}
+                            createdAt={info.createdAt}
+                        />
                     </DetailButton>
                 ))}
             </Layout>

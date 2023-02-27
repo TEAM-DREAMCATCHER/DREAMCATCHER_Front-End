@@ -11,7 +11,7 @@ export const Layout = styled.div`
 `
 
 export const PostingSection = styled.section`
-    width: 430px;
+    max-width: 430px;
     height: 932px;
     padding: 20px;
     color: white;

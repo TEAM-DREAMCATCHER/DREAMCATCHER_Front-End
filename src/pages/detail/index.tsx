@@ -1,5 +1,6 @@
 import BackIcon from '@/components/common/icons/BackIcon'
 import ProfileIcon from '@/components/common/icons/ProfileIcon'
+import { Emoji } from 'emoji-picker-react'
 import { useLocation } from 'react-router-dom'
 import {
     BackButton,
@@ -27,7 +28,7 @@ export default function Detail() {
     const loginUser = 'user'
 
     const location = useLocation()
-    const { id, userId, content, createdAt, likeCount, pri } = location.state
+    const { id, userId, content, createdAt, likeCount, pri, emoji } = location.state
     const shareHandler = () => {
         if (navigator.share) {
             navigator.share({
@@ -62,7 +63,9 @@ export default function Detail() {
                             <ShareButton onClick={() => shareHandler()}>📢</ShareButton>
                         </div>
                     </HeaderBox>
-                    <EmojiBox>{/* <Emoji unified={.emoji} size={50} /> */}😁</EmojiBox>
+                    <EmojiBox>
+                        <Emoji unified={emoji} size={50} />
+                    </EmojiBox>
                     <PostingBox>
                         <UserBox>
                             <UserInfoBox>

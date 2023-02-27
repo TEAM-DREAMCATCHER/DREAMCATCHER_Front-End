@@ -1,6 +1,5 @@
 import React from 'react'
 import AddButton from '@/components/common/AddButton'
-import Posting from '@/components/common/posting'
 
 const Test = () => {
     return (
@@ -13,8 +12,6 @@ const Test = () => {
             <AddButton shape="dot" />
             <AddButton shape="dot" size="sm" />
             <AddButton shape="dot" size="md" />
-
-            <Posting />
         </div>
     )
 }

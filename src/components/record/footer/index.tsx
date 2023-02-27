@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { ko } from 'date-fns/esm/locale'
+import getYear from 'date-fns/getYear'
+import getMonth from 'date-fns/getMonth'
 import { Footer, Date, SDatePicker, Checkbox } from './style'
 import CalendarIcon from '../../common/icons/CalendarIcon'
 
@@ -22,6 +24,12 @@ export default function RecordFooter() {
                     locale={ko}
                     dateFormat="yyyy.MM.dd"
                     showPopperArrow={false}
+                    popperPlacement="auto"
+                    renderCustomHeader={({ date }) => (
+                        <div className="month-day">
+                            {getYear(date)}.{getMonth(date) + 1}
+                        </div>
+                    )}
                 />
             </Date>
             <Checkbox>

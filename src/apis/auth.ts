@@ -1,13 +1,17 @@
 import axios from 'axios'
 
+const authRequest = axios.create({
+    baseURL: 'https://4rwbi1pbs0.execute-api.ap-northeast-2.amazonaws.com/api',
+})
+
 const ID_DUPLICATE_CHECK_BASE_URL = import.meta.env.VITE_PUBLIC_VALIDATE_DUPLICATE_URL
 const SIGN_UP_BASE_URL = import.meta.env.VITE_PUBLIC_SIGNUP_URL
 const LOGIN_BASE_URL = import.meta.env.VITE_PUBLIC_LOGIN_URL
 
 export const idDuplicateCheckAPI = async (id: string): Promise<boolean> => {
     try {
-        const response = await axios.get(ID_DUPLICATE_CHECK_BASE_URL + '?username=' + id)
-
+        const response = await authRequest.get('/validateDuplicate' + '?username=' + id)
+        console.log('response: ', response)
         return response.data.result
     } catch (error) {
         throw error

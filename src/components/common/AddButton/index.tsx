@@ -97,4 +97,6 @@ const StyledBtn = styled.button<StyledBtnProps>`
 
     border-style: ${({ shape }) => (shape ? 'dotted' : 'none')};
     border-radius: 50%;
+    border-color: ${({ shape }) => shape === true && '#635273'};
+    cursor: pointer;
 `

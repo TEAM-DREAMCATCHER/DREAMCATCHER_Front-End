@@ -19,9 +19,13 @@ import MenuIcon from '@/components/common/icons/MenuIcon'
 import yetDeveloped from '@/utils/yetDeveloped'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { getCurrentDreamsAPI } from '@/apis/home'
 
 function Home() {
     const navigate = useNavigate()
+    useEffect(() => {
+        getCurrentDreamsAPI()
+    }, [])
 
     return (
         <>

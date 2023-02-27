@@ -31,7 +31,7 @@ function SignUp() {
         <SignupLayout>
             <Flex>
                 <Header>
-                    <Link to="/">
+                    <Link to="/onboarding">
                         <BackIcon />
                     </Link>
                 </Header>

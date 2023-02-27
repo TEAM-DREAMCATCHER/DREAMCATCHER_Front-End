@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react'
 import { RecordState } from './types'
-import EmojiPicker, { Emoji } from 'emoji-picker-react'
+import EmojiPicker from 'emoji-picker-react'
 import {
     H2,
     EmojiDescription,
@@ -9,17 +9,20 @@ import {
     StyledLayout,
     EmojiContainer,
     DescriptionTextArea,
+    SEmoji,
 } from './style'
 import { EmojiClickData } from 'emoji-picker-react/dist/types/exposedTypes'
-import { Select } from './Select'
-import { SelectOption } from './Select/types'
+import Category from './category'
 
 const options = [
-    { label: '모르겠어요', value: '모르겠어요' },
-    { label: '웃겨요', value: '웃겨요' },
-    { label: '행복해요', value: '행복해요' },
-    { label: '멋져요', value: '멋져요' },
-    { label: '슬퍼요', value: '슬퍼요' },
+    '웃겨요',
+    '행복해요',
+    '멋져요',
+    '슬퍼요',
+    '신기해요',
+    '무서워요',
+    '모르겠어요',
+    '환상적이에요',
 ]
 
 function RecordLayout() {
@@ -27,8 +30,8 @@ function RecordLayout() {
         emoji: '',
         content: '',
     })
-    const [category, setCategory] = useState<SelectOption | undefined>(options[0])
     const [showPicker, setShowPicker] = useState<boolean>(false)
+    const [category, setCategory] = useState<string>('')
 
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
         setRecordState((prev) => ({ ...prev, content: event.target.value }))
@@ -50,7 +53,7 @@ function RecordLayout() {
                 <EmojiContainer>
                     <EmojiButton onClick={() => setShowPicker((prev) => !prev)}>
                         {recordState.emoji ? (
-                            <Emoji unified={recordState.emoji} size={50} />
+                            <SEmoji unified={recordState.emoji} size={50} />
                         ) : (
                             <DefaultImage src="img/plusCircle.png" alt="이모티콘 추가 버튼이미지" />
                         )}
@@ -61,7 +64,7 @@ function RecordLayout() {
             </section>
             <section>
                 <H2>어떤 감정을 느끼셨나요?</H2>
-                <Select options={options} value={category} onChange={(o) => setCategory(o)} />
+                <Category options={options} category={category} setCategory={setCategory} />
                 <DescriptionTextArea
                     placeholder="자세한 이야기를 듣고 싶어요! (최대 600자)"
                     onChange={handleChange}

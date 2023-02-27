@@ -47,7 +47,10 @@ export interface EmojiType {
 export const getPostEmojisAPI = async (year: number, month: number): Promise<EmojiType[]> => {
     const response = await lambdaRequest.get('/myDreams')
     // TODO : return type 정의
-    const emojiData = response.data.map(({ postId, emoji }) => ({ id: postId, emoji: emoji }))
+    const emojiData = response.data.map(({ id, emoji }: { id: number; emoji: string }) => ({
+        id,
+        emoji,
+    }))
     console.log('emojiData: ', emojiData)
     return emojiData
     // return DUMMY_EMOJI

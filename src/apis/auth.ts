@@ -1,16 +1,17 @@
 import axios from 'axios'
 
-const authRequest = axios.create({
-    baseURL: 'https://4rwbi1pbs0.execute-api.ap-northeast-2.amazonaws.com/api',
-})
+const VALIDATE_DUPLICATE_URL = '/validateDuplicate'
+const SIGN_UP_URL = '/signup'
+const LOGIN_URL = '/login'
 
-const ID_DUPLICATE_CHECK_BASE_URL = import.meta.env.VITE_PUBLIC_VALIDATE_DUPLICATE_URL
-const SIGN_UP_BASE_URL = import.meta.env.VITE_PUBLIC_SIGNUP_URL
-const LOGIN_BASE_URL = import.meta.env.VITE_PUBLIC_LOGIN_URL
+const authRequest = axios.create({
+    baseURL: import.meta.env.VITE_PUBLIC_LAMBDA_URL,
+})
 
 export const idDuplicateCheckAPI = async (id: string): Promise<boolean> => {
     try {
-        const response = await authRequest.get('/validateDuplicate' + '?username=' + id)
+        // TODO : debounce 걸기
+        const response = await authRequest.get(VALIDATE_DUPLICATE_URL + '?username=' + id)
         console.log('response: ', response)
         return response.data.result
     } catch (error) {
@@ -20,7 +21,9 @@ export const idDuplicateCheckAPI = async (id: string): Promise<boolean> => {
 
 export const signUpAPI = async (id: string, password: string): Promise<boolean> => {
     try {
-        const response = await authRequest.get('/signup' + '?username=' + id)
+        const response = await authRequest.post(
+            SIGN_UP_URL + '?username=' + id + '&password=' + password
+        )
 
         console.log('response: ', response)
 
@@ -37,14 +40,16 @@ export const signUpAPI = async (id: string, password: string): Promise<boolean> 
 
 export const loginAPI = async (id: string, password: string): Promise<boolean> => {
     try {
-        const response = await axios.post(
-            LOGIN_BASE_URL + '?username=' + id + '&password=' + password
+        const response = await authRequest.post(
+            LOGIN_URL + '?username=' + id + '&password=' + password
         )
+
         const token = response.data.token
         if (token) {
             localStorage.setItem('access-token', token)
             return true
         }
+
         throw new Error('로그인에 실패했습니다.')
     } catch (error) {
         throw error

@@ -1,7 +1,6 @@
-import { Emoji } from 'emoji-picker-react'
 import styled from 'styled-components'
 
-export const StyledLayout = styled.div`
+export const RecordForm = styled.form`
     max-width: 430px;
 
     section {

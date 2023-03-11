@@ -11,7 +11,7 @@ export default function RecordHeader() {
             <CloseButton onClick={() => navigate(-1)}>
                 <CloseIcon />
             </CloseButton>
-            <SaveButton>
+            <SaveButton type="submit">
                 <SaveIcon />
             </SaveButton>
         </Header>
